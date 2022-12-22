@@ -32,6 +32,10 @@ class BNB(BaseEstimator, ClassifierMixin):
         
         print(self.p_.shape)
         print(self.p_.size)
+        
+
+        print("priors\n", self.priors_)
+        print("p\n", self.p_)
         '''
 
         return self

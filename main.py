@@ -196,7 +196,7 @@ for n in range(len(inds)):
 from EMMB import EMMB
 
 max_it = 200
-min_change = 0.000001
+min_change = 0.0000001
 mbm_em = EMMB(max_it, min_change)
 
 ################################################################
