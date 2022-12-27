@@ -25,18 +25,11 @@ class BNB(BaseEstimator, ClassifierMixin):
         self.n_classes_ = len(self.classes_)
         self.p_ = np.array([X[np.where(y==i)].mean(axis=0) for i in range(self.n_classes_)])
 
-        '''
-        print("BNB P")
-        print(self.pi.shape)
-        print(self.pi.size)
-        
-        print(self.p_.shape)
-        print(self.p_.size)
-        
-
         print("priors\n", self.priors_)
-        print("p\n", self.p_)
-        '''
+        print("p[c=0]\n", self.p_[0,:])
+        print("p[c=1]\n", self.p_[1,:])
+        print("_____________________")
+
 
         return self
 
@@ -49,18 +42,11 @@ class BNB(BaseEstimator, ClassifierMixin):
             probas = []
             for j in range(self.n_classes_):
 
-                '''
-                print(self.priors_[j])
-                print(self.p_[j])
-                print(X[i])
-                '''
-
                 probas.append((self.p_[j]*X[i] +
                                (1-self.p_[j])*(1-X[i])).prod()
                               *self.priors_[j])
             probas = np.array(probas)
             res.append(probas / probas.sum())
-
 
         return np.array(res)
 

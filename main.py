@@ -27,7 +27,8 @@ from sklearn.pipeline import Pipeline
 
 # default paths
 
-onto_path.append("/content/drive/MyDrive/Colab Notebooks")
+#onto_path.append("/content/drive/MyDrive/Colab Notebooks")
+onto_path.append("C:\DATI utente\Desktop\MATERIALE TESI\MBM_IDE\onto")
 
 #onto = get_ontology("lubm.owl")
 onto = get_ontology("financial-abbrev.owl")
@@ -176,73 +177,18 @@ X = fs.fit_transform(X)
 print('X: ', X.shape)
 # print(fs.get_feature_names_out())
 
-
-
-
-'''# Model parameters
-true_priors_ = np.array([0.5, 0.5])
-true_p_ = np.random.uniform(size=(2, 13))
-X = np.zeros(shape=(len(inds), 13))
-
-print("SIZE PRIORS\n", true_priors_.size)
-# Populating the data random
-for n in range(len(inds)):
-    k = np.random.choice(a=2, p=true_priors_)
-    X[n, ] = np.random.binomial(n=1 , p=true_p_[k, ])'''
-
 # LEARNERS -----------------------------------------------------------
 
-#from MBM_EM import MBM_EM
+# For MBM with EM
 from EMMB import EMMB
 
-max_it = 200
-min_change = 0.0000001
+max_it = 800
+min_change = 0.00001
 mbm_em = EMMB(max_it, min_change)
 
 ################################################################
-'''
-# prova usando il gmm con i dati attuali
 
-bnb = GaussianMixture(n_components=1,
-                      tol=1e-3,
-                      reg_covar=1e-6,
-                      max_iter=100,
-                      n_init=1,
-                      random_state=1,
-                      warm_start=False,
-                      verbose=0,
-                      verbose_interval=10)
-
-bnb.fit(X)
-
-c = 0
-for i in X:
-    # print('\t'.join(map(str, i)))
-    for j in i:
-        if j == 0.5 : c=c+1
-
-print(c)'''
-
-##################################################################
-
-# For MMBM
-'''
-from MBM_EM import MBM_EM
-
-max_it = 200
-min_change = 0.1
-K = 50
-mbm_em = MBM_EM(X, max_it, min_change)
-mbm_em.fit(X, K)
-#mbm_em.transform(X)
-
-bernNB = BernoulliNB()
-
-rbm_bnb = Pipeline(steps=[("rbm", mbm_em), ("clf", bernNB)])
-'''
-##################################################################
-
-# For MMBM OLD
+# For MMBM with rbm + bnb
 
 from BNB import BNB
 bnb = BNB()
@@ -266,7 +212,8 @@ lr = LogisticRegression(C=0.01, penalty='l1',
 
 
 
-models = {'MBM': mbm_em,
+models = {'MBM_EM' : mbm_em,
+          'MBM': bnb,
           'MMBM': rbm_bnb,
           'LR': lr
           }
