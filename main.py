@@ -42,7 +42,8 @@ onto = get_ontology("financial-abbrev.owl")
 
 
 # np.set_printoptions(threshold=np.inf)
-reasoning.JAVA_MEMORY = 12000
+#reasoning.JAVA_MEMORY = 12000
+reasoning.JAVA_MEMORY = 4000
 
 SEED = 42  # 1
 seed(SEED)
@@ -182,16 +183,18 @@ print('X: ', X.shape)
 # For MBM with EM
 from EMMB import EMMB
 
-max_it = 800
-min_change = 0.00001
+max_it = 200
+min_change = 0.000001
 mbm_em = EMMB(max_it, min_change)
 
 ################################################################
+
 
 # For MMBM with rbm + bnb
 
 from BNB import BNB
 bnb = BNB()
+#bnb = BernoulliNB()
 
 rbm = BernoulliRBM(n_components=50,
                    batch_size=1,
@@ -206,16 +209,14 @@ rbm_bnb = Pipeline(steps=[("rbm", rbm), ("clf", bnb)])
 
 # svm = SVC(kernel='linear', degree=1, probability=True)
 
-lr = LogisticRegression(C=0.01, penalty='l1',
-                        multi_class='multinomial',
-                        solver='saga', max_iter=200)
+lr = LogisticRegression(C=0.01, penalty='l1', multi_class='multinomial', solver='saga', max_iter=200)
 
 
 
 models = {'MBM_EM' : mbm_em,
           'MBM': bnb,
-          'MMBM': rbm_bnb,
-          'LR': lr
+          #'MMBM': rbm_bnb,
+          #'LR': lr
           }
 
 m_scoring = {'P': make_scorer(precision_score, labels=[1, 0], average='weighted', zero_division=1),
@@ -293,7 +294,7 @@ with onto:
         for m, m_name in enumerate(models.keys()):
             print("\nModel:", m_name)
             scores[m] = cross_validate(models[m_name], X, y,
-                                       cv=sss0,
+                                       cv=sss,
                                        scoring=m_scoring,
                                        n_jobs=-1)
             for s, score in enumerate(m_scoring.keys()):

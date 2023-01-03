@@ -1,3 +1,31 @@
+'''INIT PARAMS OLD'''
+'''### INIT PRIORS ###
+# Init with uniform random
+self.priors = np.random.uniform(.25, .75, self.n_classes_)
+tot = np.sum(self.priors)
+self.priors = self.priors/tot
+
+# Init with counts
+unique, counts = np.unique(y, return_counts=True)
+unique = list(unique)
+c0 = counts[unique.index(0)]
+c1 = counts[unique.index(1)]
+self.priors = [c0 / (c1 + c0), c1 / (c1 + c0)]
+
+### INIT P ###
+#self.p = np.random.uniform(size=(self.n_classes_, self.D))
+
+# OLD - SAME RESULTS OF THE DISTR. COMPUTED IN PREDICT PROBA
+                #prob[n, c] = np.prod((self.p[c]**self.X[n]) * ((1-self.p[c])**(1-self.X[n])))
+
+        #self.X = np.full((X.shape[0], X.shape[1]), 0.5)
+
+        print("priors\n", self.priors_)
+print("p[c=0]\n", self.p_[0,:])
+print("p[c=1]\n", self.p_[1,:])
+'''
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 from numpy import size

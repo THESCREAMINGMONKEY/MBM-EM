@@ -1,9 +1,11 @@
-from random import random
-
 import numpy as np
+
+from random import random
+from scipy.special import logsumexp
 from sklearn.base import BaseEstimator, ClassifierMixin
 from sklearn.utils.validation import check_is_fitted, check_array, check_X_y
 from scipy.spatial import distance
+from tabulate import tabulate
 
 seed = 42
 np.random.seed(seed)
@@ -18,38 +20,82 @@ class EMMB(BaseEstimator, ClassifierMixin):
         self.verbose = True
 
 
+    def searchUnlabeled(self, y):
+
+        """This function separate the labeled data from he unlabeled in two arrays"""
+
+        N = self.N
+        labeled_X = []
+        unlabeled_X = []
+
+        for n in range(N):
+            if y[n] == 0:
+                labeled_X.append(self.X[n])
+            if y[n] == 1:
+                labeled_X.append(self.X[n])
+            if y[n] == -1:
+                unlabeled_X.append(self.X[n])
+
+        return np.array(labeled_X), np.array(unlabeled_X)
+
+    def learnParams(self, y):
+
+        """Use the labeled data to initialize params"""
+
+        ### E STEP (INIT - RESP OF ONLY LABELED DATA [1 = C|c]) ###
+
+        N = self.N
+        labeled_resp = []
+
+        for n in range(N):
+            if y[n] == 0:
+                labeled_resp.append([1,0])
+            if y[n] == 1:
+                labeled_resp.append([0,1])
+
+        ### M STEP (INIT - LEARNING PARAMS FROM LABELED DATA) ###
+
+        N = self.labeled_X.shape[0]
+        D = self.D
+        C = self.n_classes_
+        labeled_resp_array = np.array(labeled_resp)
+
+        # Numerator priors
+        N_c = np.sum(labeled_resp_array, axis=0)
+
+        p = np.empty((C, D))
+
+        for c in range(C):
+            try:
+                # Sum is over N data points
+                p[c] = np.sum(labeled_resp_array[:, c][:, np.newaxis] * self.labeled_X, axis=0) / N_c[c]
+
+            except ZeroDivisionError:
+                print("Division by zero occured in Multivariate of Bernoulli Dist M-Step!")
+
+                break
+
+        return labeled_resp_array, N_c/N, p
+
     def fit(self, X, y):
 
         """EM algorithm of Multivariate of Bernoulli Distributions"""
 
         X, y = check_X_y(X, y)
-        #self.X = np.full((X.shape[0], X.shape[1]), 0.5)
         self.X = X
         self.N = X.shape[0]
         self.D = X.shape[1]
         self.classes_ = [0, 1]
         self.n_classes_ = len(self.classes_)
 
-        '''INIT PARAMS'''
+        # Create two arrays, one for unlabeled data and the other for the labeled
+        self.labeled_X, self.unlabeled_X = self.searchUnlabeled(y)
 
-        ### INIT PRIORS ###
-        # Init with uniform random
-        self.priors = np.random.uniform(.25, .75, self.n_classes_)
-        tot = np.sum(self.priors)
-        self.priors = self.priors/tot
+        # E STEP AND M STEP INIT ON ONLY LABELED DATA
+        self.resp, self.priors, self.p = self.learnParams(y)
 
-        # Init with counts
-        '''unique, counts = np.unique(y, return_counts=True)
-        unique = list(unique)
-        c0 = counts[unique.index(0)]
-        c1 = counts[unique.index(1)]
-        self.priors = [c0 / (c1 + c0), c1 / (c1 + c0)]'''
-
-        ### INIT P ###
-        self.p = np.random.uniform(size=(self.n_classes_, self.D))
-
-        ### E STEP (INIT) ###
-        self.resp, self.likelihood = self.EStep()
+        ### E STEP OF UNLABELED AND LABELED DATA ###
+        self.resp, self.likelihood = self.EStep(y)
 
         ### SET STOP CONDITION PARAMS (INIT) ###
         eucl_norm_old, ll_old = self.stopCondition()
@@ -64,7 +110,7 @@ class EMMB(BaseEstimator, ClassifierMixin):
             self.priors, self.p = self.MStep()
 
             ### E STEP ###
-            self.resp, self.likelihood = self.EStep()
+            self.resp, self.likelihood = self.EStep(y)
 
             ### SET STOP CONDITION PARAMS ###
             self.eucl_norm, self.ll = self.stopCondition()
@@ -77,15 +123,22 @@ class EMMB(BaseEstimator, ClassifierMixin):
 
             '''SET STOP CONDITION (use once only)'''
 
-            #if np.abs(delta_ll) < self.min_change:
-            if i == self.max_it-1:
+            if np.abs(delta_norm) < self.min_change or i == self.max_it-1:
 
-                print("priors\n", self.priors)
-                print("p[c=0]\n", self.p[0,:])
-                print("p[c=1]\n", self.p[1,:])
+                table = [['Class', 'Priors', 'feat.1', 'feat.2', 'feat.3', 'feat.4', 'feat.5', 'feat.6', 'feat.7', 'feat.8', 'feat.9', 'feat.10', 'feat.11', 'feat.12', 'feat.13'],
+
+                         ['C=0', self.priors[0], self.p[0, 0], self.p[0, 1], self.p[0, 2],
+                          self.p[0, 3], self.p[0, 4], self.p[0, 5], self.p[0, 6], self.p[0, 7],
+                          self.p[0, 8], self.p[0, 9], self.p[0, 10], self.p[0, 11], self.p[0, 12]],
+
+                         ['C=1', self.priors[1], self.p[1, 0], self.p[1, 1], self.p[1, 2],
+                          self.p[1, 3], self.p[1, 4], self.p[1, 5], self.p[1, 6], self.p[1, 7],
+                          self.p[1, 8], self.p[1, 9], self.p[1, 10], self.p[1, 11], self.p[1, 12]]]
+
+                print(tabulate(table, headers='firstrow', tablefmt='fancy_grid'))
 
                 #print("ll delta: {:.8} \nstop at {}th iteration\n".format(delta_ll, i+1))
-                #print("euclidean delta: {:.8} \nstop at {}th iteration\n".format(delta_norm, i+1))
+                print("euclidean delta: {:.8} \nstop at {}th iteration\n".format(np.abs(delta_norm), i+1))
                 print("_____________________")
 
                 break
@@ -100,12 +153,15 @@ class EMMB(BaseEstimator, ClassifierMixin):
 
         """Compute stop condition (loglikelihood and 2-norm)"""
 
+        # 2-Norm
         eucl_norm = np.sum(distance.cdist(self.resp, self.resp, 'euclidean'))
+
+        # Loglikelihood
         ll = np.sum(np.log(self.likelihood))
 
         return eucl_norm, ll
 
-    def EStep(self):
+    def EStep(self, y):
 
         """To compute responsibilities, or posterior probability p(y/x)
         X = N X D matrix
@@ -129,6 +185,15 @@ class EMMB(BaseEstimator, ClassifierMixin):
         # Calculate the resps
         try:
             resp = num_resp/den_resp
+
+            N = self.N
+
+            for n in range(N):
+                if y[n] == 0:
+                    resp[n] = [1,0]
+                if y[n] == 1:
+                    resp[n] = [0,1]
+
             return resp, den_resp
 
         except ZeroDivisionError:
@@ -148,12 +213,7 @@ class EMMB(BaseEstimator, ClassifierMixin):
 
         for n in range(N):
             for c in range(C):
-
-                # OLD - SAME RESULTS OF THE DISTR. COMPUTED IN PREDICT PROBA
-                prob[n, c] = np.prod((self.p[c]**self.X[n]) * ((1-self.p[c])**(1-self.X[n])))
-
-                # SAME IN PREDICT PROBA
-                #prob[n, c] = (self.p[c]*self.X[n] + (1-self.p[c])*(1-self.X[n])).prod()
+                prob[n, c] = np.dot(np.power(self.p[c], self.X[n]), np.power(1 - self.p[c], 1 - self.X[n]))
 
         return prob
 
@@ -169,22 +229,22 @@ class EMMB(BaseEstimator, ClassifierMixin):
         C = self.n_classes_
 
         # Numerator priors
-        Nc = np.sum(self.resp, axis=0)
-        mus = np.empty((C, D))
+        N_c = np.sum(self.resp, axis=0)
+
+        p = np.empty((C, D))
 
         for c in range(C):
-            mus[c] = np.sum(self.resp[:, c][:, np.newaxis] * self.X, axis=0) #sum is over N data points
-
             try:
-                mus[c] = mus[c]/Nc[c]
+                # Sum is over N data points
+                p[c] = np.sum(self.resp[:, c][:, np.newaxis] * self.X, axis=0)/N_c[c]
 
             except ZeroDivisionError:
                 print("Division by zero occured in Multivariate of Bernoulli Dist M-Step!")
 
                 break
 
-        #priors and p
-        return Nc/N, mus
+        # Priors and p
+        return N_c/N, p
 
     ################## PREDICT ##################
 
@@ -194,19 +254,13 @@ class EMMB(BaseEstimator, ClassifierMixin):
         X = check_array(X)
         res = []
 
-        for i in range(len(X)):
+        N = X.shape[0]
+        C = self.n_classes_
+
+        for n in range(N):
             probas = []
-            for j in range(self.n_classes_):
-
-                #print(self.priors_[j])
-                #print(self.p_[j])
-                #print(X[i])
-
-                #SAME IN DISTR. BERNOULLI
-                #probas.append((self.p[j]**self.X[i] * (1-self.p[j])**(1-self.X[i])).prod()*self.priors[j])
-
-                #OLD
-                probas.append((self.p[j]*self.X[i] + (1-self.p[j])*(1-self.X[i])).prod()*self.priors[j])
+            for c in range(C):
+                probas.append((self.p[c]**self.X[n] * (1-self.p[c])**(1-self.X[n])).prod()*self.priors[c])
 
             probas = np.array(probas)
             res.append(probas / probas.sum())
@@ -221,3 +275,5 @@ class EMMB(BaseEstimator, ClassifierMixin):
         res = self.predict_proba(X)
 
         return res.argmax(axis=1)
+
+

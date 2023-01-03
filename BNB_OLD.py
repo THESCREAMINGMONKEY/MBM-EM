@@ -10,7 +10,6 @@ import numpy as np
 from sklearn.base import BaseEstimator, ClassifierMixin
 from sklearn.utils.validation import check_X_y, check_array, check_is_fitted
 #from sklearn.utils.multiclass import unique_labels
-from tabulate import tabulate
 
 
 class BNB(BaseEstimator, ClassifierMixin):
@@ -26,18 +25,11 @@ class BNB(BaseEstimator, ClassifierMixin):
         self.n_classes_ = len(self.classes_)
         self.p_ = np.array([X[np.where(y==i)].mean(axis=0) for i in range(self.n_classes_)])
 
-        table = [['Class', 'Priors', 'feat.1', 'feat.2', 'feat.3', 'feat.4', 'feat.5', 'feat.6', 'feat.7', 'feat.8', 'feat.9', 'feat.10', 'feat.11', 'feat.12', 'feat.13'],
-
-                 ['C=0', self.priors_[0], self.p_[0, 0], self.p_[0, 1], self.p_[0, 2],
-                  self.p_[0, 3], self.p_[0, 4], self.p_[0, 5], self.p_[0, 6], self.p_[0, 7],
-                  self.p_[0, 8], self.p_[0, 9], self.p_[0, 10], self.p_[0, 11], self.p_[0, 12]],
-
-                 ['C=1', self.priors_[1], self.p_[1, 0], self.p_[1, 1], self.p_[1, 2],
-                  self.p_[1, 3], self.p_[1, 4], self.p_[1, 5], self.p_[1, 6], self.p_[1, 7],
-                  self.p_[1, 8], self.p_[1, 9], self.p_[1, 10], self.p_[1, 11], self.p_[1, 12]]]
-
-        print(tabulate(table, headers='firstrow', tablefmt='fancy_grid'))
+        print("priors\n", self.priors_)
+        print("p[c=0]\n", self.p_[0,:])
+        print("p[c=1]\n", self.p_[1,:])
         print("_____________________")
+
 
         return self
 
@@ -66,5 +58,7 @@ class BNB(BaseEstimator, ClassifierMixin):
         X = check_array(X)
 
         res = self.predict_proba(X)
+
+        print(res)
 
         return res.argmax(axis=1)
