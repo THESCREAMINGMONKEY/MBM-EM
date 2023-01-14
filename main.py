@@ -4,24 +4,15 @@
 
 import types
 import numpy as np
-#import pandas as pd
 
-from random import seed, random  # , randrange
+from random import seed
 
 import pandas as pd
 from owlready2 import onto_path, get_ontology, sync_reasoner_pellet, Thing, Not, reasoning  # , reasoning, IRIS
 from sklearn.linear_model import LogisticRegression
-from sklearn.mixture import GaussianMixture
-from sklearn.naive_bayes import BernoulliNB
-from sklearn.semi_supervised import SelfTrainingClassifier
 from sklearn.neural_network import BernoulliRBM
-from sklearn.naive_bayes import BernoulliNB
-from sklearn.svm import SVC
-#from sklearn.tree import DecisionTreeClassifier
-#from sklearn.linear_model import LogisticRegression
-
-from sklearn.metrics import make_scorer, precision_score, recall_score, f1_score #,roc_auc_score, accuracy_score, balanced_accuracy_score
-from sklearn.model_selection import cross_validate, StratifiedShuffleSplit, StratifiedKFold, GridSearchCV
+from sklearn.metrics import make_scorer, precision_score, recall_score, f1_score
+from sklearn.model_selection import cross_validate, StratifiedShuffleSplit
 from sklearn.feature_selection import VarianceThreshold
 from sklearn.pipeline import Pipeline
 
@@ -79,8 +70,6 @@ for j, d_property in enumerate(dprops):
     print('%5d: %s (%s >> %s)' % (j, d_property, d_property.domain, d_property.range))
 
 # Individuals
-
-
 inds = list(onto.individuals())
 print('#Individuals ASSERTED: %d \n' % (len(inds),))
 
@@ -170,7 +159,6 @@ for f in range(len(features)):
 
 X = pi.T
 
-
 print("\nFEATURE SELECTION (were %d)" % (X.shape[1]))
 fs = VarianceThreshold(threshold=0.1)
 X = fs.fit_transform(X)
@@ -181,11 +169,12 @@ print('X: ', X.shape)
 # LEARNERS -----------------------------------------------------------
 
 # For MBM with EM
-from EMMB import EMMB
+
+from BNB_EM import BNB_EM
 
 max_it = 200
 min_change = 0.000001
-mbm_em = EMMB(max_it, min_change)
+mbm_em = BNB_EM(max_it, min_change)
 
 ################################################################
 
