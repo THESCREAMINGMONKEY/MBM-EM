@@ -19,7 +19,9 @@ from sklearn.pipeline import Pipeline
 # default paths
 
 #onto_path.append("/content/drive/MyDrive/Colab Notebooks")
-onto_path.append("C:\DATI utente\Desktop\MATERIALE TESI\MBM_IDE\onto")
+
+# Absolute path
+onto_path.append("onto")
 
 #onto = get_ontology("lubm.owl")
 onto = get_ontology("financial-abbrev.owl")

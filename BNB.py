@@ -26,6 +26,13 @@ class BNB(BaseEstimator, ClassifierMixin):
         self.n_classes_ = len(self.classes_)
         self.p_ = np.array([X[np.where(y==i)].mean(axis=0) for i in range(self.n_classes_)])
 
+        # Not work well, mainly for NTNames
+        # self.printParams()
+
+        return self
+
+    def printParams(self):
+
         table = [['Class', 'Priors', 'feat.1', 'feat.2', 'feat.3', 'feat.4', 'feat.5', 'feat.6', 'feat.7', 'feat.8', 'feat.9', 'feat.10', 'feat.11', 'feat.12', 'feat.13'],
 
                  ['C=0', self.priors_[0], self.p_[0, 0], self.p_[0, 1], self.p_[0, 2],
@@ -37,9 +44,8 @@ class BNB(BaseEstimator, ClassifierMixin):
                   self.p_[1, 8], self.p_[1, 9], self.p_[1, 10], self.p_[1, 11], self.p_[1, 12]]]
 
         print(tabulate(table, headers='firstrow', tablefmt='fancy_grid'))
-        print("_____________________")
 
-        return self
+    ################## PREDICT ##################
 
     def predict_proba(self, X):
         check_is_fitted(self)

@@ -1,3 +1,12 @@
+"""
+Università degli studi di Bari Aldo Moro
+
+@author: Christian Riefolo
+Mat: 618687
+email: c.riefolo2@studenti.uniba.it
+"""
+
+
 import numpy as np
 
 from random import random
@@ -11,11 +20,6 @@ np.random.seed(seed)
 rand = random()
 
 class BNB_EM(BaseEstimator, ClassifierMixin):
-    """Legend of the terms:
-    D = number of features
-    N = number of individuals
-    C = number of classes"""
-
 
     def __init__(self, max_it, min_change):
 
@@ -23,7 +27,7 @@ class BNB_EM(BaseEstimator, ClassifierMixin):
         self.min_change = min_change
         self.verbose = True
 
-
+    # ONLY FOR INITIALIZATION INSIDE "fit" METHOD
     def searchUnlabeled(self, y):
 
         """This function separate the labeled data from the unlabeled in two arrays"""
@@ -42,6 +46,7 @@ class BNB_EM(BaseEstimator, ClassifierMixin):
 
         return np.array(labeled_X), np.array(unlabeled_X)
 
+    # ONLY FOR INITIALIZATION INSIDE "fit" METHOD
     def learnParams(self, y):
 
         """Use the labeled data to initialize params"""
@@ -87,10 +92,10 @@ class BNB_EM(BaseEstimator, ClassifierMixin):
 
         X, y = check_X_y(X, y)
         self.X_ = X
-        self.N_ = X.shape[0]
-        self.D_ = X.shape[1]
+        self.N_ = X.shape[0] # Number of individuals
+        self.D_ = X.shape[1] # Number of features
         self.classes_ = [0, 1]
-        self.n_classes_ = len(self.classes_)
+        self.n_classes_ = len(self.classes_) # Number of classes
 
         # Create two arrays, one for unlabeled data and the other for the labeled
         self.labeled_X_, self.unlabeled_X_ = self.searchUnlabeled(y)
@@ -123,23 +128,25 @@ class BNB_EM(BaseEstimator, ClassifierMixin):
             delta_norm = self.eucl_norm_ - eucl_norm_old
 
             # Loglikelihood difference
-            #delta_ll = self.ll - ll_old
+            # delta_ll = self.ll - ll_old
 
             '''SET STOP CONDITION (use once only)'''
 
             if np.abs(delta_norm) < self.min_change or i == self.max_it-1:
 
-                self.printParams()
+                # It does not work well, mainly for NTNames
+                # self.printParams()
 
-                #print("ll delta: {:.8} \nstop at {}th iteration\n".format(delta_ll, i+1))
-                print("euclidean delta: {:.8} \nstop at {}th iteration\n".format(np.abs(delta_norm), i+1))
+                # print("ll delta: {:.8} \nstop at {}th iteration\n".format(delta_ll, i+1))
+
                 print("_____________________")
+                print("euclidean delta: {:.8} \nstop at {}th iteration\n".format(np.abs(delta_norm), i+1))
 
                 break
 
             else:
                 eucl_norm_old = self.eucl_norm_
-                #ll_old = self.ll
+                # ll_old = self.ll
 
         return self
 
@@ -151,7 +158,7 @@ class BNB_EM(BaseEstimator, ClassifierMixin):
         eucl_norm = np.sum(distance.cdist(self.resp_, self.resp_, 'euclidean'))
 
         # Loglikelihood
-        #ll = np.sum(np.log(self.likelihood))
+        # ll = np.sum(np.log(self.likelihood))
 
         return eucl_norm
 
@@ -163,20 +170,20 @@ class BNB_EM(BaseEstimator, ClassifierMixin):
         p = C X D matrix
         prob or resp (result) = N X C matrix"""
 
-        #step 1
+        # Step 1
         # Calculate the p(x/means)
         prob = self.distrBernoulli()
 
-        #step 2
+        # Step 2
         # Calculate the numerator of the resps
         num_resp = prob * self.priors_
 
-        #step 3
+        # Step 3
         # Calculate the denominator of the resps
         den_resp = num_resp.sum(axis=1)[:, np.newaxis]
 
-        # step 4
-        # Calculate the resps
+        # Step 4
+        # Calculate the responsibilities
         try:
             resp = num_resp/den_resp
 
@@ -268,12 +275,12 @@ class BNB_EM(BaseEstimator, ClassifierMixin):
         C = self.n_classes_
 
         for n in range(N):
-            probas = []
+            prob = []
             for c in range(C):
-                probas.append((self.p_[c]**X[n] * (1-self.p_[c])**(1-X[n])).prod()*self.priors_[c])
+                prob.append((self.p_[c]**X[n] * (1-self.p_[c])**(1-X[n])).prod()*self.priors_[c])
 
-            probas = np.array(probas)
-            res.append(probas / probas.sum())
+            prob = np.array(prob)
+            res.append(prob / prob.sum())
 
         return np.array(res)
 
