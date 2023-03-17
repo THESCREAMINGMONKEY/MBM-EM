@@ -1,5 +1,5 @@
 """
-Università degli studi di Bari Aldo Moro
+Università degli Studi di Bari Aldo Moro
 
 @author: Christian Riefolo
 Mat: 618687
@@ -10,14 +10,11 @@ email: c.riefolo2@studenti.uniba.it
 import numpy as np
 
 from random import random
-from sklearn.base import BaseEstimator, ClassifierMixin
+from sklearn.base import BaseEstimator, ClassifierMixin, TransformerMixin
 from sklearn.utils.validation import check_is_fitted, check_array, check_X_y
 from scipy.spatial import distance
 from tabulate import tabulate
 
-seed = 42
-np.random.seed(seed)
-rand = random()
 
 class BNB_EM(BaseEstimator, ClassifierMixin):
 
@@ -86,6 +83,56 @@ class BNB_EM(BaseEstimator, ClassifierMixin):
 
         return labeled_resp_array, N_c/N, p
 
+    def EM_inc_values(self):
+
+        """Implementation of the Expectation Maximization algorithm for imputing missing values in binary data.
+
+         Returns:
+         imputed_data: The data matrix with imputed missing values (N X D matrix)"""
+
+        num_iterations = 100
+        tol = 0.0001
+
+        num_samples, num_features = self.X_.shape
+
+        self.X_[self.X_ == 0.5] = np.nan
+
+        # Initialize the probability of each feature being 1 using the observed data
+        prob = np.nanmean(self.X_, axis=0)
+
+        # Initialize the missing values with the mean of the observed values
+        imputed_data = np.copy(self.X_)
+        imputed_data[np.isnan(imputed_data)] = np.random.binomial(n=1, p=np.tile(prob, (num_samples, 1)))[np.isnan(imputed_data)]
+
+        # Iterate until convergence or maximum number of iterations is reached
+        for i in range(num_iterations):
+
+            # Expectation step: calculate the expected value of each missing value
+            expected_value = prob[np.newaxis, :] * imputed_data
+
+            for j in range(num_features):
+                missing_values = np.isnan(self.X_[:, j])
+
+                if np.sum(missing_values) > 0:
+                    missing_prob = prob[j] * (1 - prob[j]) ** np.sum(missing_values)
+                    expected_value[missing_values, j] = missing_prob * np.sum(imputed_data[~missing_values, j]) / np.sum(1 - np.isnan(self.X_[:, j]))
+
+            # Maximization step: update the probability of each feature being 1
+            prob = np.mean(expected_value, axis=0)
+
+            # Update the missing values using the expected value
+            imputed_data[np.isnan(self.X_)] = np.random.binomial(n=1, p=expected_value)[np.isnan(self.X_)]
+
+            # Check for convergence
+            log_likelihood = np.sum(self.X_ * np.log(expected_value + 1e-9) + (1 - self.X_) * np.log(1 - expected_value + 1e-9))
+            if i > 0 and log_likelihood - prev_log_likelihood < tol:
+                break
+            prev_log_likelihood = log_likelihood
+
+        return imputed_data
+
+
+
     def fit(self, X, y):
 
         """EM algorithm of Multivariate of Bernoulli Distributions"""
@@ -96,6 +143,10 @@ class BNB_EM(BaseEstimator, ClassifierMixin):
         self.D_ = X.shape[1] # Number of features
         self.classes_ = [0, 1]
         self.n_classes_ = len(self.classes_) # Number of classes
+
+
+        ## E-M FOR UNKNOWN VALUE IN X (x_i) ##
+        self.X_ = self.EM_inc_values()
 
         # Create two arrays, one for unlabeled data and the other for the labeled
         self.labeled_X_, self.unlabeled_X_ = self.searchUnlabeled(y)
@@ -109,9 +160,7 @@ class BNB_EM(BaseEstimator, ClassifierMixin):
         ### SET STOP CONDITION PARAMS (INIT) ###
         eucl_norm_old = self.stopCondition()
 
-        '''############################################################################
-           ############################### EM ALGO LOOP ###############################
-           ############################################################################'''
+        '''############################### EM ALGO LOOP ###############################'''
 
         for i in range(self.max_it):
 
@@ -261,6 +310,16 @@ class BNB_EM(BaseEstimator, ClassifierMixin):
                   self.p_[1, 8], self.p_[1, 9], self.p_[1, 10], self.p_[1, 11], self.p_[1, 12]]]
 
         print(tabulate(table, headers='firstrow', tablefmt='fancy_grid'))
+
+
+    def fit_transform(self, X, y=None, **fit_params):
+
+        self.fit(X, y)
+        return self.transform()
+
+    def transform(self):
+
+        return self
 
 
     ################## PREDICT ##################

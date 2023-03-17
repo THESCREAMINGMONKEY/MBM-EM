@@ -10,11 +10,16 @@ from random import seed
 import pandas as pd
 from owlready2 import onto_path, get_ontology, sync_reasoner_pellet, Thing, Not, reasoning  # , reasoning, IRIS
 from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import BernoulliNB
 from sklearn.neural_network import BernoulliRBM
 from sklearn.metrics import make_scorer, precision_score, recall_score, f1_score
 from sklearn.model_selection import cross_validate, StratifiedShuffleSplit
 from sklearn.feature_selection import VarianceThreshold
 from sklearn.pipeline import Pipeline
+
+
+import warnings
+#warnings.filterwarnings('always')  # "error", "ignore", "always", "default", "module" or "once"
 
 # default paths
 
@@ -162,13 +167,36 @@ for f in range(len(features)):
 X = pi.T
 
 print("\nFEATURE SELECTION (were %d)" % (X.shape[1]))
-fs = VarianceThreshold(threshold=0.1)
+fs = VarianceThreshold(threshold=0.1) # was 0.1
 X = fs.fit_transform(X)
 # print(fs.variances_)
 print('X: ', X.shape)
 # print(fs.get_feature_names_out())
 
 # LEARNERS -----------------------------------------------------------
+
+# For MBM with bnb
+
+from BNB import BNB
+bnb = BNB()
+
+##################################################################
+
+# For MMBM with rbm + bnb
+
+#rbm = BernoulliRBM(n_components=50, batch_size=1, n_iter=200, learning_rate=0.01, random_state=SEED, verbose=False)
+
+#rbm_bnb = Pipeline(steps=[("rbm", rbm), ("clf", bnb)])
+
+##################################################################
+
+# svm = SVC(kernel='linear', degree=1, probability=True)
+
+##################################################################
+
+#lr = LogisticRegression(C=0.01, penalty='l1', multi_class='multinomial', solver='saga', max_iter=200)
+
+##################################################################
 
 # For MBM with EM
 
@@ -178,35 +206,14 @@ max_it = 200
 min_change = 0.000001
 mbm_em = BNB_EM(max_it, min_change)
 
-################################################################
-
-
-# For MMBM with rbm + bnb
-
-from BNB import BNB
-bnb = BNB()
-#bnb = BernoulliNB()
-
-rbm = BernoulliRBM(n_components=50,
-                   batch_size=1,
-                   n_iter=200,
-                   learning_rate=0.01,
-                   random_state=SEED,
-                   verbose=False)
-
-rbm_bnb = Pipeline(steps=[("rbm", rbm), ("clf", bnb)])
-
 ##################################################################
-
-# svm = SVC(kernel='linear', degree=1, probability=True)
-
-lr = LogisticRegression(C=0.01, penalty='l1', multi_class='multinomial', solver='saga', max_iter=200)
 
 
 
 models = {'MBM_EM' : mbm_em,
           'MBM': bnb,
           #'MMBM': rbm_bnb,
+          #'MMBM_EM': mbm_em_bnb, # not work (incomplete)
           #'LR': lr
           }
 
@@ -214,12 +221,16 @@ m_scoring = {'P': make_scorer(precision_score, labels=[1, 0], average='weighted'
              'R': make_scorer(recall_score, labels=[1, 0], average='weighted'),
              'F1': make_scorer(f1_score, labels=[1, 0], average='weighted')}
 
+#metrics.f1_score(y_test, y_pred, average='weighted', labels=np.unique(y_pred))
+
 
 # PROBLEMS MAIN LOOP
 
 print('\n...loading TARGET CLASSES')
 
-filename = onto.name + "-targets.n3"
+filename = onto.name + "-t.n3"
+#filename = onto.name + "-t.nt"
+#filename = onto.name + "-t.owl"
 target_onto = get_ontology(filename).load()
 
 # target_name = "http://www.example.org/" + onto.name + "/targets#Target"
