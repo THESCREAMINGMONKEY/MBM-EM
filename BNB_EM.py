@@ -10,11 +10,16 @@ email: c.riefolo2@studenti.uniba.it
 import numpy as np
 
 from random import random
+
+from matplotlib import pyplot as plt
 from sklearn.base import BaseEstimator, ClassifierMixin, TransformerMixin
 from sklearn.utils.validation import check_is_fitted, check_array, check_X_y
 from scipy.spatial import distance
 from tabulate import tabulate
+from scipy.special import logsumexp
 
+from sklearn.metrics import confusion_matrix
+import seaborn as sns
 
 class BNB_EM(BaseEstimator, ClassifierMixin):
 
@@ -87,13 +92,14 @@ class BNB_EM(BaseEstimator, ClassifierMixin):
 
         """Implementation of the Expectation Maximization algorithm for imputing missing values in binary data.
 
+         self.N_ = Number of samples
+         self.D_ = Number of features
          Returns:
          imputed_data: The data matrix with imputed missing values (N X D matrix)"""
 
         num_iterations = 100
         tol = 0.0001
-
-        num_samples, num_features = self.X_.shape
+        prev_log_likelihood = 0
 
         self.X_[self.X_ == 0.5] = np.nan
 
@@ -102,7 +108,8 @@ class BNB_EM(BaseEstimator, ClassifierMixin):
 
         # Initialize the missing values with the mean of the observed values
         imputed_data = np.copy(self.X_)
-        imputed_data[np.isnan(imputed_data)] = np.random.binomial(n=1, p=np.tile(prob, (num_samples, 1)))[np.isnan(imputed_data)]
+
+        imputed_data[np.isnan(imputed_data)] = np.random.binomial(n=1, p=np.tile(prob, (self.N_, 1)))[np.isnan(imputed_data)]
 
         # Iterate until convergence or maximum number of iterations is reached
         for i in range(num_iterations):
@@ -110,7 +117,7 @@ class BNB_EM(BaseEstimator, ClassifierMixin):
             # Expectation step: calculate the expected value of each missing value
             expected_value = prob[np.newaxis, :] * imputed_data
 
-            for j in range(num_features):
+            for j in range(self.D_):
                 missing_values = np.isnan(self.X_[:, j])
 
                 if np.sum(missing_values) > 0:
@@ -123,11 +130,12 @@ class BNB_EM(BaseEstimator, ClassifierMixin):
             # Update the missing values using the expected value
             imputed_data[np.isnan(self.X_)] = np.random.binomial(n=1, p=expected_value)[np.isnan(self.X_)]
 
-            # Check for convergence
-            log_likelihood = np.sum(self.X_ * np.log(expected_value + 1e-9) + (1 - self.X_) * np.log(1 - expected_value + 1e-9))
-            if i > 0 and log_likelihood - prev_log_likelihood < tol:
+            log_likelihood = np.sum(np.nan_to_num(self.X_ * np.log(expected_value) + (1 - self.X_) * np.log(1 - expected_value)))
+
+            if i > num_iterations or log_likelihood - prev_log_likelihood < tol:
                 break
-            prev_log_likelihood = log_likelihood
+            else:
+                prev_log_likelihood = log_likelihood
 
         return imputed_data
 
@@ -139,6 +147,8 @@ class BNB_EM(BaseEstimator, ClassifierMixin):
 
         X, y = check_X_y(X, y)
         self.X_ = X
+        #self.X_ = np.array(X, dtype=object) it cause more problems
+
         self.N_ = X.shape[0] # Number of individuals
         self.D_ = X.shape[1] # Number of features
         self.classes_ = [0, 1]
@@ -188,8 +198,8 @@ class BNB_EM(BaseEstimator, ClassifierMixin):
 
                 # print("ll delta: {:.8} \nstop at {}th iteration\n".format(delta_ll, i+1))
 
-                print("_____________________")
-                print("euclidean delta: {:.8} \nstop at {}th iteration\n".format(np.abs(delta_norm), i+1))
+                #print("_____________________")
+                #print("euclidean delta: {:.8} \nstop at {}th iteration\n".format(np.abs(delta_norm), i+1))
 
                 break
 
@@ -297,32 +307,9 @@ class BNB_EM(BaseEstimator, ClassifierMixin):
         # Priors and p
         return N_c/N, p
 
-    def printParams(self):
-
-        table = [['Class', 'Priors', 'feat.1', 'feat.2', 'feat.3', 'feat.4', 'feat.5', 'feat.6', 'feat.7', 'feat.8', 'feat.9', 'feat.10', 'feat.11', 'feat.12', 'feat.13'],
-
-                 ['C=0', self.priors_[0], self.p_[0, 0], self.p_[0, 1], self.p_[0, 2],
-                  self.p_[0, 3], self.p_[0, 4], self.p_[0, 5], self.p_[0, 6], self.p_[0, 7],
-                  self.p_[0, 8], self.p_[0, 9], self.p_[0, 10], self.p_[0, 11], self.p_[0, 12]],
-
-                 ['C=1', self.priors_[1], self.p_[1, 0], self.p_[1, 1], self.p_[1, 2],
-                  self.p_[1, 3], self.p_[1, 4], self.p_[1, 5], self.p_[1, 6], self.p_[1, 7],
-                  self.p_[1, 8], self.p_[1, 9], self.p_[1, 10], self.p_[1, 11], self.p_[1, 12]]]
-
-        print(tabulate(table, headers='firstrow', tablefmt='fancy_grid'))
-
-
-    def fit_transform(self, X, y=None, **fit_params):
-
-        self.fit(X, y)
-        return self.transform()
-
-    def transform(self):
-
-        return self
-
 
     ################## PREDICT ##################
+
 
     def predict_proba(self, X):
 
@@ -353,3 +340,33 @@ class BNB_EM(BaseEstimator, ClassifierMixin):
         return res.argmax(axis=1)
 
 
+
+
+
+    '''def printParams(self):
+
+        table = [['Class', 'Priors', 'feat.1', 'feat.2', 'feat.3', 'feat.4', 'feat.5', 'feat.6', 'feat.7', 'feat.8', 'feat.9', 'feat.10', 'feat.11', 'feat.12', 'feat.13'],
+
+                 ['C=0', self.priors_[0], self.p_[0, 0], self.p_[0, 1], self.p_[0, 2],
+                  self.p_[0, 3], self.p_[0, 4], self.p_[0, 5], self.p_[0, 6], self.p_[0, 7],
+                  self.p_[0, 8], self.p_[0, 9], self.p_[0, 10], self.p_[0, 11], self.p_[0, 12]],
+
+                 ['C=1', self.priors_[1], self.p_[1, 0], self.p_[1, 1], self.p_[1, 2],
+                  self.p_[1, 3], self.p_[1, 4], self.p_[1, 5], self.p_[1, 6], self.p_[1, 7],
+                  self.p_[1, 8], self.p_[1, 9], self.p_[1, 10], self.p_[1, 11], self.p_[1, 12]]]
+
+        print(tabulate(table, headers='firstrow', tablefmt='fancy_grid'))'''
+'''
+labels = ['business', 'health']
+cm = confusion_matrix(y_test, pred, labels)
+print(cm)
+fig = plt.figure()
+ax = fig.add_subplot(111)
+cax = ax.matshow(cm)
+plt.title('Confusion matrix of the classifier')
+fig.colorbar(cax)
+ax.set_xticklabels([''] + labels)
+ax.set_yticklabels([''] + labels)
+plt.xlabel('Predicted')
+plt.ylabel('True')
+plt.show()'''

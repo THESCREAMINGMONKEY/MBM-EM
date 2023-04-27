@@ -1,0 +1,2023 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.example.org/financial-abbrev/targets"
+         xmlns="http://www.example.org/financial-abbrev/targets#">
+
+
+<owl:Ontology rdf:about="http://www.example.org/financial-abbrev/targets"/>
+
+<owl:Class rdf:about="#Target">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_63_17">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_hasLoan_range"/>
+        <rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#From18To25"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#cClass_11_31"/>
+  <rdfs:subClassOf rdf:resource="#cClass_11_37"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Region"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_65"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_25"/>
+  <rdfs:subClassOf rdf:resource="#cClass_23_5"/>
+  <rdfs:subClassOf rdf:resource="#cClass_10_52"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Payment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From35To50"/>
+  <rdfs:subClassOf rdf:resource="#cClass_59_20"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_46"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Client"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanStatusValue"/>
+  <rdfs:subClassOf rdf:resource="#cClass_61_24"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_PermanentOrder"/>
+  <rdfs:subClassOf rdf:resource="#cClass_44_16"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_3"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From25To35"/>
+  <rdfs:subClassOf rdf:resource="#cClass_19_57"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_47"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_3"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_63_17">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_63_17"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From18To25"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Some_hasLoan_range"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_44_16">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Finished"/>
+        <rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Below18"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#cClass_11_31"/>
+  <rdfs:subClassOf rdf:resource="#cClass_11_37"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_28"/>
+  <rdfs:subClassOf rdf:resource="#cClass_67_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_35_63"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_25"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Running"/>
+  <rdfs:subClassOf rdf:resource="#cClass_10_52"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Payment"/>
+  <rdfs:subClassOf rdf:resource="#cClass_63_17"/>
+  <rdfs:subClassOf rdf:resource="#cClass_18_69"/>
+  <rdfs:subClassOf rdf:resource="#cClass_19_57"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_47"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_46"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_37"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_3"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanStatusValue"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_2"/>
+  <rdfs:subClassOf rdf:resource="#cClass_57_70"/>
+  <rdfs:subClassOf rdf:resource="#cClass_61_24"/>
+  <rdfs:subClassOf rdf:resource="#cClass_69_64"/>
+  <rdfs:subClassOf rdf:resource="#cClass_58_63"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_66"/>
+  <rdfs:subClassOf rdf:resource="#cClass_69_61"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_PermanentOrder"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_44_16">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_44_16"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Below18"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Finished"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_69_64">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_hasPermanentOrder_range"/>
+        <rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_hasAgeValue_range"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#cClass_23_5"/>
+  <rdfs:subClassOf rdf:resource="#cClass_0_9"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_AgeValue"/>
+  <rdfs:subClassOf rdf:resource="#cClass_44_16"/>
+  <rdfs:subClassOf rdf:resource="#cClass_11_31"/>
+  <rdfs:subClassOf rdf:resource="#cClass_11_37"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_25"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SexValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Payment"/>
+  <rdfs:subClassOf rdf:resource="#cClass_19_57"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_47"/>
+  <rdfs:subClassOf rdf:resource="#cClass_59_20"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_46"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanStatusValue"/>
+  <rdfs:subClassOf rdf:resource="#cClass_61_24"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_PermanentOrder"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_69_64">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_69_64"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Some_hasAgeValue_range"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Some_hasPermanentOrder_range"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_58_63">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#WestBohemia"/>
+        <rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_hasLoan_range"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#cClass_23_5"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_AgeValue"/>
+  <rdfs:subClassOf rdf:resource="#cClass_44_16"/>
+  <rdfs:subClassOf rdf:resource="#cClass_11_37"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_25"/>
+  <rdfs:subClassOf rdf:resource="#cClass_10_52"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Payment"/>
+  <rdfs:subClassOf rdf:resource="#cClass_19_57"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_47"/>
+  <rdfs:subClassOf rdf:resource="#cClass_59_20"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_46"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_3"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanStatusValue"/>
+  <rdfs:subClassOf rdf:resource="#cClass_61_24"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_PermanentOrder"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_58_63">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_58_63"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Some_hasLoan_range"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_WestBohemia"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_18_69">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#From25To35"/>
+        <rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_hasPermanentOrder_range"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#cClass_23_5"/>
+  <rdfs:subClassOf rdf:resource="#cClass_44_16"/>
+  <rdfs:subClassOf rdf:resource="#cClass_11_31"/>
+  <rdfs:subClassOf rdf:resource="#cClass_11_37"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Region"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_25"/>
+  <rdfs:subClassOf rdf:resource="#cClass_10_52"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Payment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From18To25"/>
+  <rdfs:subClassOf rdf:resource="#cClass_19_57"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_47"/>
+  <rdfs:subClassOf rdf:resource="#cClass_59_20"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_46"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_3"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanStatusValue"/>
+  <rdfs:subClassOf rdf:resource="#cClass_61_24"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_PermanentOrder"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_18_69">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_18_69"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From25To35"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Some_hasPermanentOrder_range"/>
+</owl:Class>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Above65">
+  <rdfs:subClassOf rdf:resource="#Class_0_9"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#AgeValue">
+  <rdfs:subClassOf rdf:resource="#cClass_11_31"/>
+  <rdfs:subClassOf rdf:resource="#cClass_11_37"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_28"/>
+  <rdfs:subClassOf rdf:resource="#cClass_35_63"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_65"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_25"/>
+  <rdfs:subClassOf rdf:resource="#cClass_23_5"/>
+  <rdfs:subClassOf rdf:resource="#cClass_10_52"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_46"/>
+  <rdfs:subClassOf rdf:resource="#cClass_61_24"/>
+  <rdfs:subClassOf rdf:resource="#cClass_69_61"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Account"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SexValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Transaction"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Loan"/>
+  <rdfs:subClassOf rdf:resource="#cClass_67_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_37"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_2"/>
+  <rdfs:subClassOf rdf:resource="#cClass_57_70"/>
+  <rdfs:subClassOf rdf:resource="#cClass_69_64"/>
+  <rdfs:subClassOf rdf:resource="#cClass_58_63"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_66"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Region"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Client"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Account">
+  <rdfs:subClassOf rdf:resource="#Class_2_28"/>
+  <rdfs:subClassOf rdf:resource="#Class_2_37"/>
+  <rdfs:subClassOf rdf:resource="#Class_2_66"/>
+  <rdfs:subClassOf rdf:resource="#Class_56_2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Client">
+  <rdfs:subClassOf rdf:resource="#cClass_11_31"/>
+  <rdfs:subClassOf rdf:resource="#cClass_11_37"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_28"/>
+  <rdfs:subClassOf rdf:resource="#cClass_35_63"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_25"/>
+  <rdfs:subClassOf rdf:resource="#cClass_23_5"/>
+  <rdfs:subClassOf rdf:resource="#cClass_63_17"/>
+  <rdfs:subClassOf rdf:resource="#cClass_59_20"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_46"/>
+  <rdfs:subClassOf rdf:resource="#cClass_61_24"/>
+  <rdfs:subClassOf rdf:resource="#cClass_69_61"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Loan"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Transaction"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Account"/>
+  <rdfs:subClassOf rdf:resource="#Class_4_3"/>
+  <rdfs:subClassOf rdf:resource="#Class_56_3"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#CreditCard">
+  <rdfs:subClassOf rdf:resource="#Class_4_65"/>
+  <rdfs:subClassOf rdf:resource="#cClass_10_52"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_69_64"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Loan">
+  <rdfs:subClassOf rdf:resource="#Class_23_5"/>
+  <rdfs:subClassOf rdf:resource="#cClass_11_31"/>
+  <rdfs:subClassOf rdf:resource="#cClass_11_37"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#LoanStatusValue">
+  <rdfs:subClassOf rdf:resource="#cClass_11_31"/>
+  <rdfs:subClassOf rdf:resource="#cClass_11_37"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_28"/>
+  <rdfs:subClassOf rdf:resource="#cClass_35_63"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_65"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_25"/>
+  <rdfs:subClassOf rdf:resource="#cClass_23_5"/>
+  <rdfs:subClassOf rdf:resource="#cClass_10_52"/>
+  <rdfs:subClassOf rdf:resource="#cClass_63_17"/>
+  <rdfs:subClassOf rdf:resource="#cClass_59_20"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_46"/>
+  <rdfs:subClassOf rdf:resource="#cClass_61_24"/>
+  <rdfs:subClassOf rdf:resource="#cClass_69_61"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Account"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SexValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Transaction"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Loan"/>
+  <rdfs:subClassOf rdf:resource="#cClass_0_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_44_16"/>
+  <rdfs:subClassOf rdf:resource="#cClass_67_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_18_69"/>
+  <rdfs:subClassOf rdf:resource="#cClass_19_57"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_47"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_37"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_2"/>
+  <rdfs:subClassOf rdf:resource="#cClass_57_70"/>
+  <rdfs:subClassOf rdf:resource="#cClass_69_64"/>
+  <rdfs:subClassOf rdf:resource="#cClass_58_63"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_66"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Region"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Client"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Payment">
+  <rdfs:subClassOf rdf:resource="#cClass_11_31"/>
+  <rdfs:subClassOf rdf:resource="#cClass_11_37"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_28"/>
+  <rdfs:subClassOf rdf:resource="#cClass_35_63"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_65"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_25"/>
+  <rdfs:subClassOf rdf:resource="#cClass_23_5"/>
+  <rdfs:subClassOf rdf:resource="#cClass_10_52"/>
+  <rdfs:subClassOf rdf:resource="#cClass_63_17"/>
+  <rdfs:subClassOf rdf:resource="#cClass_59_20"/>
+  <rdfs:subClassOf rdf:resource="#cClass_61_24"/>
+  <rdfs:subClassOf rdf:resource="#cClass_69_61"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Account"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SexValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Transaction"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Loan"/>
+  <rdfs:subClassOf rdf:resource="#cClass_0_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_44_16"/>
+  <rdfs:subClassOf rdf:resource="#cClass_67_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_18_69"/>
+  <rdfs:subClassOf rdf:resource="#cClass_19_57"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_37"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_2"/>
+  <rdfs:subClassOf rdf:resource="#cClass_57_70"/>
+  <rdfs:subClassOf rdf:resource="#cClass_69_64"/>
+  <rdfs:subClassOf rdf:resource="#cClass_58_63"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_66"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#PermanentOrder">
+  <rdfs:subClassOf rdf:resource="#cClass_11_31"/>
+  <rdfs:subClassOf rdf:resource="#cClass_11_37"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_28"/>
+  <rdfs:subClassOf rdf:resource="#cClass_35_63"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_65"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_25"/>
+  <rdfs:subClassOf rdf:resource="#cClass_23_5"/>
+  <rdfs:subClassOf rdf:resource="#cClass_10_52"/>
+  <rdfs:subClassOf rdf:resource="#cClass_63_17"/>
+  <rdfs:subClassOf rdf:resource="#cClass_59_20"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_46"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Account"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SexValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Transaction"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Loan"/>
+  <rdfs:subClassOf rdf:resource="#cClass_0_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_44_16"/>
+  <rdfs:subClassOf rdf:resource="#cClass_67_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_18_69"/>
+  <rdfs:subClassOf rdf:resource="#cClass_19_57"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_47"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_37"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_2"/>
+  <rdfs:subClassOf rdf:resource="#cClass_57_70"/>
+  <rdfs:subClassOf rdf:resource="#cClass_69_64"/>
+  <rdfs:subClassOf rdf:resource="#cClass_58_63"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_66"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Region"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Client"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Region">
+  <rdfs:subClassOf rdf:resource="#cClass_11_37"/>
+  <rdfs:subClassOf rdf:resource="#cClass_35_63"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_65"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_25"/>
+  <rdfs:subClassOf rdf:resource="#cClass_23_5"/>
+  <rdfs:subClassOf rdf:resource="#cClass_10_52"/>
+  <rdfs:subClassOf rdf:resource="#cClass_63_17"/>
+  <rdfs:subClassOf rdf:resource="#cClass_59_20"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_46"/>
+  <rdfs:subClassOf rdf:resource="#cClass_61_24"/>
+  <rdfs:subClassOf rdf:resource="#cClass_69_61"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Loan"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Transaction"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SexValue"/>
+  <rdfs:subClassOf rdf:resource="#Class_0_9"/>
+  <rdfs:subClassOf rdf:resource="#Class_67_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_18_69"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#SexValue">
+  <rdfs:subClassOf rdf:resource="#Class_10_52"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_65"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_69_64"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Transaction">
+  <rdfs:subClassOf rdf:resource="#Class_11_31"/>
+  <rdfs:subClassOf rdf:resource="#Class_11_37"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Monthly">
+  <rdfs:subClassOf rdf:resource="#Class_14_36"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Below18">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From50To65"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From25To35"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From35To50"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From18To25"/>
+  <rdfs:subClassOf rdf:resource="#Class_44_16"/>
+  <rdfs:subClassOf rdf:resource="#cClass_59_20"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#From18To25">
+  <rdfs:subClassOf rdf:resource="#Class_63_17"/>
+  <rdfs:subClassOf rdf:resource="#cClass_18_69"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#From25To35">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From50To65"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Below18"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From35To50"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From18To25"/>
+  <rdfs:subClassOf rdf:resource="#Class_18_69"/>
+  <rdfs:subClassOf rdf:resource="#cClass_63_17"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#From35To50">
+  <rdfs:subClassOf rdf:resource="#cClass_63_17"/>
+  <rdfs:subClassOf rdf:resource="#cClass_59_20"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From50To65"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Below18"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From25To35"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From18To25"/>
+  <rdfs:subClassOf rdf:resource="#Class_19_57"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#From50To65">
+  <rdfs:subClassOf rdf:resource="#Class_59_20"/>
+  <rdfs:subClassOf rdf:resource="#Class_20_47"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#CashCredit">
+  <rdfs:subClassOf rdf:resource="#cClass_23_5"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_2"/>
+  <rdfs:subClassOf rdf:resource="#cClass_27_23"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Credit">
+  <rdfs:subClassOf rdf:resource="#cClass_41_25"/>
+  <rdfs:subClassOf rdf:resource="#cClass_61_24"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Withdrawal"/>
+  <rdfs:subClassOf rdf:resource="#cClass_19_57"/>
+  <rdfs:subClassOf rdf:resource="#cClass_57_70"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#CollectionAnotherBank">
+  <rdfs:subClassOf rdf:resource="#Class_23_5"/>
+  <rdfs:subClassOf rdf:resource="#Class_27_23"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#CashWithdrawal">
+  <rdfs:subClassOf rdf:resource="#Class_61_24"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Withdrawal">
+  <rdfs:subClassOf rdf:resource="#Class_41_25"/>
+  <rdfs:subClassOf rdf:resource="#cClass_23_5"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#CreditCardWithdrawal">
+  <rdfs:subClassOf rdf:resource="#cClass_61_24"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_RemittanceAnotherBank"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CashWithdrawal"/>
+  <rdfs:subClassOf rdf:resource="#cClass_19_57"/>
+  <rdfs:subClassOf rdf:resource="#cClass_27_23"/>
+  <rdfs:subClassOf rdf:resource="#cClass_57_70"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#RemittanceAnotherBank">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCardWithdrawal"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CashWithdrawal"/>
+  <rdfs:subClassOf rdf:resource="#Class_27_23"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#CentralBohemia">
+  <rdfs:subClassOf rdf:resource="#Class_2_28"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#EastBohemia">
+  <rdfs:subClassOf rdf:resource="#cClass_11_31"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CentralBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthMoravia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthMoravia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Prague"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_28"/>
+  <rdfs:subClassOf rdf:resource="#cClass_32_33"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#NorthBohemia">
+  <rdfs:subClassOf rdf:resource="#cClass_11_31"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_28"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CentralBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_EastBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthMoravia"/>
+  <rdfs:subClassOf rdf:resource="#cClass_32_33"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#NorthMoravia">
+  <rdfs:subClassOf rdf:resource="#Class_11_31"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CentralBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthMoravia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Prague"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_EastBohemia"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Prague">
+  <rdfs:subClassOf rdf:resource="#cClass_11_31"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_28"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CentralBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_EastBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthMoravia"/>
+  <rdfs:subClassOf rdf:resource="#Class_32_33"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#SouthBohemia">
+  <rdfs:subClassOf rdf:resource="#cClass_11_31"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_28"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CentralBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_EastBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthMoravia"/>
+  <rdfs:subClassOf rdf:resource="#Class_32_33"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#SouthMoravia">
+  <rdfs:subClassOf rdf:resource="#cClass_11_31"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_28"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CentralBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_EastBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthMoravia"/>
+  <rdfs:subClassOf rdf:resource="#cClass_32_33"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Classic">
+  <rdfs:subClassOf rdf:resource="#Class_35_63"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_37"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Gold">
+  <rdfs:subClassOf rdf:resource="#Class_14_36"/>
+  <rdfs:subClassOf rdf:resource="#cClass_11_37"/>
+  <rdfs:subClassOf rdf:resource="#cClass_35_63"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_46"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_37"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Junior">
+  <rdfs:subClassOf rdf:resource="#Class_11_37"/>
+  <rdfs:subClassOf rdf:resource="#Class_37_46"/>
+  <rdfs:subClassOf rdf:resource="#Class_2_37"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#DebtRunningLoan">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_OKRunningLoan"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_25"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Running">
+  <rdfs:subClassOf rdf:resource="#cClass_44_16"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#ProblemStatus">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_OKStatus"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#OKRunningLoan">
+  <rdfs:subClassOf rdf:resource="#Class_41_25"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Finished">
+  <rdfs:subClassOf rdf:resource="#cClass_41_25"/>
+  <rdfs:subClassOf rdf:resource="#Class_44_16"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#ForStatementPayment">
+  <rdfs:subClassOf rdf:resource="#cClass_37_46"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanPayment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_HouseholdPayment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_InsurrancePayment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Leasing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#HouseholdPayment">
+  <rdfs:subClassOf rdf:resource="#Class_37_46"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#InsurrancePayment">
+  <rdfs:subClassOf rdf:resource="#cClass_37_46"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanPayment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_HouseholdPayment"/>
+  <rdfs:subClassOf rdf:resource="#Class_20_47"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Leasing">
+  <rdfs:subClassOf rdf:resource="#cClass_37_46"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanPayment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_HouseholdPayment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_ForStatementPayment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_InsurrancePayment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#LoanPayment">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_ForStatementPayment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Leasing"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_InsurrancePayment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_HouseholdPayment"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_47"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_46"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Man">
+  <rdfs:subClassOf rdf:resource="#cClass_10_52"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Woman">
+  <rdfs:subClassOf rdf:resource="#Class_10_52"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#OKStatus">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_ProblemStatus"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#OldAgePension">
+  <rdfs:subClassOf rdf:resource="#Class_56_2"/>
+  <rdfs:subClassOf rdf:resource="#Class_56_3"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#SanctionInterestCashWithdrawal">
+  <rdfs:subClassOf rdf:resource="#Class_19_57"/>
+  <rdfs:subClassOf rdf:resource="#Class_57_70"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#WestBohemia">
+  <rdfs:subClassOf rdf:resource="#Class_58_63"/>
+</rdf:Description>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5174"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan7240"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan7277"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5337"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5338"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5360"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5420"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5446"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5447"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5449"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5450"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5479"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5644"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5713"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5718"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5758"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5765"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5772"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5815"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5861"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5880"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5886"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5887"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan6038"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan6088"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan6153"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan6168"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan6169"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan6202"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan6253"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan6306"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan6321"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan6355"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan6469"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan6470"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan6471"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan6520"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5125"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan5126"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan6675"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan6676"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan6686"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan6687"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan6695"/>
+
+<Class_62_62 rdf:about="http://www.owl-ontologies.com/unnamed.owl#loan6696"/>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_hasLoanStatusValue_range">
+  <rdfs:subClassOf rdf:resource="#Class_59_20"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_isPermanentOrderFor_range">
+  <rdfs:subClassOf rdf:resource="#Class_61_24"/>
+  <rdfs:subClassOf rdf:resource="#Class_69_61"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_IsLoanOf_range">
+  <owl:equivalentClass rdf:resource="#Class_62_62"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_hasLoan_range">
+  <rdfs:subClassOf rdf:resource="#Class_35_63"/>
+  <rdfs:subClassOf rdf:resource="#Class_63_17"/>
+  <rdfs:subClassOf rdf:resource="#Class_58_63"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_hasAgeValue_range">
+  <rdfs:subClassOf rdf:resource="#Class_69_64"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_hasCreditCard_range">
+  <rdfs:subClassOf rdf:resource="#Class_4_65"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_isCreditCardOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_2_66"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_hasOwner_range">
+  <rdfs:subClassOf rdf:resource="#Class_67_9"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_hasPermanentOrder_range">
+  <rdfs:subClassOf rdf:resource="#Class_69_61"/>
+  <rdfs:subClassOf rdf:resource="#Class_18_69"/>
+  <rdfs:subClassOf rdf:resource="#Class_69_64"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_hasStatementIssuanceFrequency_range">
+  <rdfs:subClassOf rdf:resource="#Class_57_70"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_isWithdrawalFor_range">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Non_Loan">
+  <rdfs:subClassOf rdf:resource="#cClass_62_62"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Non_Region">
+  <rdfs:subClassOf rdf:resource="#cClass_32_33"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Non_Transaction">
+  <rdfs:subClassOf rdf:resource="#cClass_27_23"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Non_Some_IsLoanOf_range">
+  <owl:equivalentClass rdf:resource="#cClass_62_62"/>
+</rdf:Description>
+
+
+<owl:Class rdf:about="#Target">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_26_68">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#CreditCardWithdrawal"/>
+        <rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_isOwnerOf_range"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_AgeValue"/>
+  <rdfs:subClassOf rdf:resource="#cClass_21_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_21"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Credit"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Region"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Loan"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SexValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Payment"/>
+  <rdfs:subClassOf rdf:resource="#cClass_36_44"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_34"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanStatusValue"/>
+  <rdfs:subClassOf rdf:resource="#cClass_40_66"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_RemittanceAnotherBank"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CashWithdrawal"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Account"/>
+  <rdfs:subClassOf rdf:resource="#cClass_8_61"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_PermanentOrder"/>
+  <rdfs:subClassOf rdf:resource="#cClass_10_0"/>
+  <rdfs:subClassOf rdf:resource="#cClass_38_16"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_22"/>
+  <rdfs:subClassOf rdf:resource="#cClass_9_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_29_36"/>
+  <rdfs:subClassOf rdf:resource="#cClass_42_7"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_30"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_27"/>
+  <rdfs:subClassOf rdf:resource="#cClass_23_2"/>
+  <rdfs:subClassOf rdf:resource="#cClass_34_24"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_26_68">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_26_68"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCardWithdrawal"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Some_isOwnerOf_range"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_2_30">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Account"/>
+        <rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#NorthBohemia"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#cClass_10_0"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_AgeValue"/>
+  <rdfs:subClassOf rdf:resource="#cClass_38_16"/>
+  <rdfs:subClassOf rdf:resource="#cClass_21_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_21"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_22"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Transaction"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CentralBohemia"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_60"/>
+  <rdfs:subClassOf rdf:resource="#cClass_26_68"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Loan"/>
+  <rdfs:subClassOf rdf:resource="#cClass_29_36"/>
+  <rdfs:subClassOf rdf:resource="#cClass_42_7"/>
+  <rdfs:subClassOf rdf:resource="#cClass_36_44"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_34"/>
+  <rdfs:subClassOf rdf:resource="#cClass_44_3"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthMoravia"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_27"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanStatusValue"/>
+  <rdfs:subClassOf rdf:resource="#cClass_64_23"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Prague"/>
+  <rdfs:subClassOf rdf:resource="#cClass_40_66"/>
+  <rdfs:subClassOf rdf:resource="#cClass_34_24"/>
+  <rdfs:subClassOf rdf:resource="#cClass_74_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_8_61"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_PermanentOrder"/>
+  <rdfs:subClassOf rdf:resource="#cClass_71_52"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthBohemia"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_2_30">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_2_30"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Account"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_53_38">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#NoProblemsFinishedLoan"/>
+        <rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#DebtRunningLoan"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Loan"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NotPaidFinishedLoan"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_27"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_53_38">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_53_38"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_DebtRunningLoan"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NoProblemsFinishedLoan"/>
+</owl:Class>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Above65">
+  <rdfs:subClassOf rdf:resource="#Class_17_0"/>
+  <rdfs:subClassOf rdf:resource="#Class_10_0"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#AgeValue">
+  <rdfs:subClassOf rdf:resource="#cClass_21_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_21"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_60"/>
+  <rdfs:subClassOf rdf:resource="#cClass_26_68"/>
+  <rdfs:subClassOf rdf:resource="#cClass_36_44"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_34"/>
+  <rdfs:subClassOf rdf:resource="#cClass_44_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="#cClass_40_66"/>
+  <rdfs:subClassOf rdf:resource="#cClass_74_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_8_61"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Client"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Transaction"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="#cClass_9_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_29_36"/>
+  <rdfs:subClassOf rdf:resource="#cClass_42_7"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_30"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_27"/>
+  <rdfs:subClassOf rdf:resource="#cClass_23_2"/>
+  <rdfs:subClassOf rdf:resource="#cClass_64_23"/>
+  <rdfs:subClassOf rdf:resource="#cClass_34_24"/>
+  <rdfs:subClassOf rdf:resource="#cClass_71_52"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Region"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanStatusValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Payment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Account"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Account">
+  <rdfs:subClassOf rdf:resource="#cClass_21_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_21"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_60"/>
+  <rdfs:subClassOf rdf:resource="#cClass_26_68"/>
+  <rdfs:subClassOf rdf:resource="#cClass_36_44"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_34"/>
+  <rdfs:subClassOf rdf:resource="#cClass_44_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="#cClass_40_66"/>
+  <rdfs:subClassOf rdf:resource="#cClass_74_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_8_61"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Client"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Transaction"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="#Class_23_2"/>
+  <rdfs:subClassOf rdf:resource="#Class_2_30"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Client">
+  <rdfs:subClassOf rdf:resource="#Class_44_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_21_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_36_44"/>
+  <rdfs:subClassOf rdf:resource="#cClass_9_62"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#CreditCard">
+  <rdfs:subClassOf rdf:resource="#Class_4_12"/>
+  <rdfs:subClassOf rdf:resource="#Class_4_60"/>
+  <rdfs:subClassOf rdf:resource="#cClass_26_68"/>
+  <rdfs:subClassOf rdf:resource="#cClass_44_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_74_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_64_23"/>
+  <rdfs:subClassOf rdf:resource="#cClass_71_52"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Loan">
+  <rdfs:subClassOf rdf:resource="#cClass_37_21"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_60"/>
+  <rdfs:subClassOf rdf:resource="#cClass_26_68"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_34"/>
+  <rdfs:subClassOf rdf:resource="#cClass_40_66"/>
+  <rdfs:subClassOf rdf:resource="#cClass_8_61"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Transaction"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="#cClass_10_0"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_22"/>
+  <rdfs:subClassOf rdf:resource="#cClass_29_36"/>
+  <rdfs:subClassOf rdf:resource="#cClass_42_7"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_30"/>
+  <rdfs:subClassOf rdf:resource="#cClass_23_2"/>
+  <rdfs:subClassOf rdf:resource="#cClass_64_23"/>
+  <rdfs:subClassOf rdf:resource="#cClass_34_24"/>
+  <rdfs:subClassOf rdf:resource="#cClass_71_52"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SexValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanStatusValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Payment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Account"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#LoanStatusValue">
+  <rdfs:subClassOf rdf:resource="#cClass_21_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_21"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_60"/>
+  <rdfs:subClassOf rdf:resource="#cClass_26_68"/>
+  <rdfs:subClassOf rdf:resource="#cClass_36_44"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_34"/>
+  <rdfs:subClassOf rdf:resource="#cClass_44_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="#cClass_74_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_8_61"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Client"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Transaction"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="#cClass_9_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_30"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_AgeValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SexValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_PermanentOrder"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Account"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Payment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Loan"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Region"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Payment">
+  <rdfs:subClassOf rdf:resource="#cClass_21_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_21"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_60"/>
+  <rdfs:subClassOf rdf:resource="#cClass_26_68"/>
+  <rdfs:subClassOf rdf:resource="#cClass_36_44"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_34"/>
+  <rdfs:subClassOf rdf:resource="#cClass_44_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="#cClass_40_66"/>
+  <rdfs:subClassOf rdf:resource="#cClass_74_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_8_61"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Client"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Transaction"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="#Class_42_7"/>
+  <rdfs:subClassOf rdf:resource="#cClass_10_0"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#PermanentOrder">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <rdfs:subClassOf rdf:resource="#cClass_21_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_21"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_60"/>
+  <rdfs:subClassOf rdf:resource="#cClass_26_68"/>
+  <rdfs:subClassOf rdf:resource="#cClass_36_44"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_34"/>
+  <rdfs:subClassOf rdf:resource="#cClass_44_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="#cClass_40_66"/>
+  <rdfs:subClassOf rdf:resource="#cClass_74_62"/>
+  <owl:equivalentClass rdf:resource="#Class_8_61"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Client"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Transaction"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="#cClass_10_0"/>
+  <rdfs:subClassOf rdf:resource="#cClass_38_16"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_22"/>
+  <rdfs:subClassOf rdf:resource="#cClass_9_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_29_36"/>
+  <rdfs:subClassOf rdf:resource="#cClass_42_7"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_30"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_27"/>
+  <rdfs:subClassOf rdf:resource="#cClass_23_2"/>
+  <rdfs:subClassOf rdf:resource="#cClass_64_23"/>
+  <rdfs:subClassOf rdf:resource="#cClass_34_24"/>
+  <rdfs:subClassOf rdf:resource="#cClass_71_52"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SexValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Account"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Payment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Region"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanStatusValue"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Region">
+  <rdfs:subClassOf rdf:resource="#cClass_21_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_21"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_60"/>
+  <rdfs:subClassOf rdf:resource="#cClass_26_68"/>
+  <rdfs:subClassOf rdf:resource="#cClass_36_44"/>
+  <rdfs:subClassOf rdf:resource="#cClass_44_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_40_66"/>
+  <rdfs:subClassOf rdf:resource="#cClass_74_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_8_61"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Client"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Transaction"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="#Class_9_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_38_16"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_27"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_AgeValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SexValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_PermanentOrder"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Account"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Payment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanStatusValue"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#SexValue">
+  <rdfs:subClassOf rdf:resource="#cClass_21_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_21"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_60"/>
+  <rdfs:subClassOf rdf:resource="#cClass_26_68"/>
+  <rdfs:subClassOf rdf:resource="#cClass_36_44"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_34"/>
+  <rdfs:subClassOf rdf:resource="#cClass_44_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="#cClass_40_66"/>
+  <rdfs:subClassOf rdf:resource="#cClass_74_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_8_61"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Client"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="#Class_10_0"/>
+  <rdfs:subClassOf rdf:resource="#cClass_38_16"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_22"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Transaction">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Client"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_AgeValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_PermanentOrder"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Account"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Loan"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Payment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Region"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanStatusValue"/>
+  <rdfs:subClassOf rdf:resource="#cClass_10_0"/>
+  <rdfs:subClassOf rdf:resource="#cClass_38_16"/>
+  <rdfs:subClassOf rdf:resource="#cClass_9_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_60"/>
+  <rdfs:subClassOf rdf:resource="#cClass_29_36"/>
+  <rdfs:subClassOf rdf:resource="#cClass_42_7"/>
+  <rdfs:subClassOf rdf:resource="#cClass_36_44"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_34"/>
+  <rdfs:subClassOf rdf:resource="#cClass_44_3"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_30"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="#cClass_40_66"/>
+  <rdfs:subClassOf rdf:resource="#cClass_74_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_8_61"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SexValue"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#AfterTransaction">
+  <rdfs:subClassOf rdf:resource="#Class_4_12"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Below18">
+  <rdfs:subClassOf rdf:resource="#Class_38_16"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From25To35"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#AgeValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From50To65"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From35To50"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From18To25"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#From18To25">
+  <rdfs:subClassOf rdf:resource="#Class_17_0"/>
+  <rdfs:subClassOf rdf:resource="#cClass_38_16"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From25To35"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#AgeValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From50To65"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From35To50"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Below18"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#From25To35">
+  <rdfs:subClassOf rdf:resource="#cClass_38_16"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_22"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From18To25"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From50To65"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Below18"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#From35To50">
+  <rdfs:subClassOf rdf:resource="#cClass_38_16"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_22"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From18To25"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From50To65"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Below18"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#From50To65">
+  <rdfs:subClassOf rdf:resource="#Class_20_22"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#CashCredit">
+  <rdfs:subClassOf rdf:resource="#Class_21_62"/>
+  <rdfs:subClassOf rdf:resource="#Class_37_21"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Credit">
+  <rdfs:subClassOf rdf:resource="#cClass_26_68"/>
+  <rdfs:subClassOf rdf:resource="#Class_20_22"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Withdrawal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#CollectionAnotherBank">
+  <rdfs:subClassOf rdf:resource="#cClass_21_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_21"/>
+  <rdfs:subClassOf rdf:resource="#Class_23_2"/>
+  <rdfs:subClassOf rdf:resource="#Class_64_23"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#CashWithdrawal">
+  <rdfs:subClassOf rdf:resource="#cClass_26_68"/>
+  <rdfs:subClassOf rdf:resource="#Class_34_24"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Withdrawal">
+  <rdfs:subClassOf rdf:resource="#cClass_21_62"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_21"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_22"/>
+  <rdfs:subClassOf rdf:resource="#cClass_23_2"/>
+  <rdfs:subClassOf rdf:resource="#cClass_64_23"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Credit"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#CreditCardWithdrawal">
+  <rdfs:subClassOf rdf:resource="#Class_26_68"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CashWithdrawal"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_RemittanceAnotherBank"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#RemittanceAnotherBank">
+  <rdfs:subClassOf rdf:resource="#cClass_26_68"/>
+  <rdfs:subClassOf rdf:resource="#Class_41_27"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#CentralBohemia">
+  <rdfs:subClassOf rdf:resource="#cClass_37_34"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthMoravia"/>
+  <rdfs:subClassOf rdf:resource="#cClass_29_36"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_30"/>
+  <rdfs:subClassOf rdf:resource="#cClass_34_24"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_EastBohemia"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#EastBohemia">
+  <rdfs:subClassOf rdf:resource="#cClass_37_34"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthMoravia"/>
+  <rdfs:subClassOf rdf:resource="#Class_29_36"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#NorthBohemia">
+  <rdfs:subClassOf rdf:resource="#Class_30_41"/>
+  <rdfs:subClassOf rdf:resource="#Class_2_30"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_EastBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthMoravia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Prague"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthMoravia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CentralBohemia"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#NorthMoravia">
+  <rdfs:subClassOf rdf:resource="#cClass_37_34"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthMoravia"/>
+  <rdfs:subClassOf rdf:resource="#cClass_29_36"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_30"/>
+  <rdfs:subClassOf rdf:resource="#cClass_34_24"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_EastBohemia"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Prague">
+  <rdfs:subClassOf rdf:resource="#cClass_37_34"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthMoravia"/>
+  <rdfs:subClassOf rdf:resource="#cClass_29_36"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_30"/>
+  <rdfs:subClassOf rdf:resource="#cClass_34_24"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_EastBohemia"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#SouthBohemia">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_EastBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthMoravia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Prague"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthMoravia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CentralBohemia"/>
+  <rdfs:subClassOf rdf:resource="#cClass_29_36"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_34"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_30"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="#cClass_34_24"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#SouthMoravia">
+  <rdfs:subClassOf rdf:resource="#Class_37_34"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_EastBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Prague"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthMoravia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CentralBohemia"/>
+  <rdfs:subClassOf rdf:resource="#Class_34_24"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Classic">
+  <rdfs:subClassOf rdf:resource="#cClass_37_21"/>
+  <rdfs:subClassOf rdf:resource="#cClass_36_44"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_34"/>
+  <rdfs:subClassOf rdf:resource="#cClass_29_36"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Gold">
+  <rdfs:subClassOf rdf:resource="#Class_36_44"/>
+  <rdfs:subClassOf rdf:resource="#Class_29_36"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Junior">
+  <rdfs:subClassOf rdf:resource="#Class_37_21"/>
+  <rdfs:subClassOf rdf:resource="#Class_37_34"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#DebtRunningLoan">
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="#Class_38_16"/>
+  <rdfs:subClassOf rdf:resource="#Class_53_38"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_OKRunningLoan"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Running">
+  <rdfs:subClassOf rdf:resource="#cClass_36_44"/>
+  <rdfs:subClassOf rdf:resource="#cClass_44_3"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#ProblemStatus">
+  <rdfs:subClassOf rdf:resource="#Class_40_66"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#OKRunningLoan">
+  <rdfs:subClassOf rdf:resource="#Class_30_41"/>
+  <rdfs:subClassOf rdf:resource="#Class_41_27"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_DebtRunningLoan"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#FemaleSex">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_MaleSex"/>
+  <rdfs:subClassOf rdf:resource="#Class_42_7"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#MaleSex">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_FemaleSex"/>
+  <rdfs:subClassOf rdf:resource="#cClass_42_7"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Finished">
+  <rdfs:subClassOf rdf:resource="#Class_36_44"/>
+  <rdfs:subClassOf rdf:resource="#Class_44_3"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Running"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#ForStatementPayment">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_HouseholdPayment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Leasing"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_InsurrancePayment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanPayment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#HouseholdPayment">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Leasing"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_ForStatementPayment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#InsurrancePayment">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Leasing"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_ForStatementPayment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Leasing">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_HouseholdPayment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_ForStatementPayment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_InsurrancePayment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanPayment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#LoanPayment">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Leasing"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_ForStatementPayment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Man">
+  <rdfs:subClassOf rdf:resource="#cClass_71_52"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Woman">
+  <rdfs:subClassOf rdf:resource="#Class_71_52"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#NoProblemsFinishedLoan">
+  <rdfs:subClassOf rdf:resource="#Class_53_72"/>
+  <rdfs:subClassOf rdf:resource="#Class_53_38"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#OKStatus">
+  <rdfs:subClassOf rdf:resource="#cClass_40_66"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#NotPaidFinishedLoan">
+  <rdfs:subClassOf rdf:resource="#cClass_53_38"/>
+  <rdfs:subClassOf rdf:resource="#cClass_53_72"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_hasSexValue_range">
+  <rdfs:subClassOf rdf:resource="#Class_4_60"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_isPermanentOrderFor_range">
+  <rdfs:subClassOf rdf:resource="#Class_8_61"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_IsLoanOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_21_62"/>
+  <rdfs:subClassOf rdf:resource="#Class_74_62"/>
+  <rdfs:subClassOf rdf:resource="#Class_9_62"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_hasAgeValue_range">
+  <rdfs:subClassOf rdf:resource="#Class_64_23"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_hasCreditCard_range">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_isCreditCardOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_40_66"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_isOwnerOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_26_68"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_isTransactionFrom_range">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Transaction"/>
+  <rdfs:subClassOf rdf:resource="#Class_71_52"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_isUserOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_53_72"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_isWithdrawalFor_range">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_livesIn_range">
+  <rdfs:subClassOf rdf:resource="#Class_74_62"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Non_AgeValue">
+  <rdfs:subClassOf rdf:resource="#cClass_17_0"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From18To25"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Above65"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Below18"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Non_Loan">
+  <rdfs:subClassOf rdf:resource="#cClass_53_38"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Non_PermanentOrder">
+  <owl:equivalentClass rdf:resource="#cClass_8_61"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Non_Transaction">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Some_isTransactionFrom_range"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<owl:Class rdf:about="#Class_48_53">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Leasing"/>
+        <rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#NoProblemsFinishedLoan"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Class_48_5"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_9"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Running"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NotPaidFinishedLoan"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_48_53">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_48_53"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Leasing"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NoProblemsFinishedLoan"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_74_0">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_livesIn_range"/>
+        <rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Above65"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#cClass_58_22"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Transaction"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_62_35"/>
+  <rdfs:subClassOf rdf:resource="#cClass_73_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_26_59"/>
+  <rdfs:subClassOf rdf:resource="#cClass_48_5"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SexValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Payment"/>
+  <rdfs:subClassOf rdf:resource="#cClass_54_61"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanStatusValue"/>
+  <rdfs:subClassOf rdf:resource="#cClass_66_62"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Account"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_PermanentOrder"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_74_0">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_74_0"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Above65"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Some_livesIn_range"/>
+</owl:Class>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Above65">
+  <rdfs:subClassOf rdf:resource="#Class_74_0"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#AgeValue">
+  <rdfs:subClassOf rdf:resource="#cClass_73_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_26_59"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_PermanentOrder"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Region"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SexValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanStatusValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Loan"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Payment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Account"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Client"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Account">
+  <rdfs:subClassOf rdf:resource="#cClass_74_0"/>
+  <rdfs:subClassOf rdf:resource="#cClass_58_22"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_62_35"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_73_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_26_59"/>
+  <rdfs:subClassOf rdf:resource="#cClass_48_5"/>
+  <rdfs:subClassOf rdf:resource="#cClass_17_58"/>
+  <rdfs:subClassOf rdf:resource="#cClass_54_61"/>
+  <rdfs:subClassOf rdf:resource="#cClass_66_62"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_AgeValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Loan"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Region"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Client">
+  <rdfs:subClassOf rdf:resource="#cClass_58_22"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_62_35"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_73_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_26_59"/>
+  <rdfs:subClassOf rdf:resource="#cClass_48_5"/>
+  <rdfs:subClassOf rdf:resource="#cClass_17_58"/>
+  <rdfs:subClassOf rdf:resource="#cClass_54_61"/>
+  <rdfs:subClassOf rdf:resource="#cClass_66_62"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Region"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_AgeValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Loan"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#CreditCard">
+  <rdfs:subClassOf rdf:resource="#Class_20_4"/>
+  <rdfs:subClassOf rdf:resource="#Class_73_4"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_AgeValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Transaction"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_PermanentOrder"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Region"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SexValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanStatusValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Loan"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Payment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Account"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Client"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Loan">
+  <rdfs:subClassOf rdf:resource="#Class_48_5"/>
+  <owl:equivalentClass rdf:resource="#Class_5_53"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#LoanStatusValue">
+  <rdfs:subClassOf rdf:resource="#cClass_74_0"/>
+  <rdfs:subClassOf rdf:resource="#cClass_58_22"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_62_35"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_73_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_26_59"/>
+  <rdfs:subClassOf rdf:resource="#cClass_48_5"/>
+  <rdfs:subClassOf rdf:resource="#cClass_17_58"/>
+  <rdfs:subClassOf rdf:resource="#cClass_66_62"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Region"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_AgeValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Loan"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Payment">
+  <rdfs:subClassOf rdf:resource="#cClass_74_0"/>
+  <rdfs:subClassOf rdf:resource="#cClass_58_22"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_62_35"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_73_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_26_59"/>
+  <rdfs:subClassOf rdf:resource="#cClass_5_53"/>
+  <rdfs:subClassOf rdf:resource="#cClass_17_58"/>
+  <rdfs:subClassOf rdf:resource="#cClass_54_61"/>
+  <rdfs:subClassOf rdf:resource="#cClass_66_62"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_AgeValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Region"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#PermanentOrder">
+  <rdfs:subClassOf rdf:resource="#cClass_74_0"/>
+  <rdfs:subClassOf rdf:resource="#cClass_58_22"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_62_35"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_73_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_26_59"/>
+  <rdfs:subClassOf rdf:resource="#cClass_48_5"/>
+  <rdfs:subClassOf rdf:resource="#cClass_17_58"/>
+  <rdfs:subClassOf rdf:resource="#cClass_66_62"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_AgeValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Region"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Loan"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Region">
+  <rdfs:subClassOf rdf:resource="#Class_41_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_62_35"/>
+  <rdfs:subClassOf rdf:resource="#cClass_26_59"/>
+  <rdfs:subClassOf rdf:resource="#cClass_48_5"/>
+  <rdfs:subClassOf rdf:resource="#cClass_66_62"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#SexValue">
+  <rdfs:subClassOf rdf:resource="#cClass_74_0"/>
+  <rdfs:subClassOf rdf:resource="#cClass_58_22"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_62_35"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_73_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_26_59"/>
+  <rdfs:subClassOf rdf:resource="#cClass_48_5"/>
+  <rdfs:subClassOf rdf:resource="#cClass_17_58"/>
+  <rdfs:subClassOf rdf:resource="#cClass_54_61"/>
+  <rdfs:subClassOf rdf:resource="#cClass_66_62"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Region"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_AgeValue"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Loan"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Transaction">
+  <rdfs:subClassOf rdf:resource="#cClass_74_0"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_62_35"/>
+  <rdfs:subClassOf rdf:resource="#cClass_20_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_48_5"/>
+  <rdfs:subClassOf rdf:resource="#cClass_17_58"/>
+  <rdfs:subClassOf rdf:resource="#cClass_54_61"/>
+  <rdfs:subClassOf rdf:resource="#cClass_66_62"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Region"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CreditCard"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Loan"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Below18">
+  <rdfs:subClassOf rdf:resource="#cClass_20_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_17_58"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From50To65"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From18To25"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#From18To25">
+  <rdfs:subClassOf rdf:resource="#Class_17_58"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From25To35"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From50To65"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Below18"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From35To50"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#From25To35">
+  <rdfs:subClassOf rdf:resource="#cClass_20_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_17_58"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From50To65"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From18To25"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#From35To50">
+  <rdfs:subClassOf rdf:resource="#cClass_20_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_17_58"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From50To65"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_From18To25"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#From50To65">
+  <rdfs:subClassOf rdf:resource="#Class_20_4"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Credit">
+  <rdfs:subClassOf rdf:resource="#Class_58_22"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#CashWithdrawal">
+  <rdfs:subClassOf rdf:resource="#cClass_26_59"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Withdrawal">
+  <rdfs:subClassOf rdf:resource="#cClass_58_22"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Credit"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#CreditCardWithdrawal">
+  <rdfs:subClassOf rdf:resource="#Class_26_59"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#RemittanceAnotherBank">
+  <rdfs:subClassOf rdf:resource="#cClass_26_59"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#CentralBohemia">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthMoravia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthBohemia"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#EastBohemia">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthMoravia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthBohemia"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#NorthBohemia">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthMoravia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Prague"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthMoravia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_EastBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CentralBohemia"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#NorthMoravia">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthMoravia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Prague"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_EastBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CentralBohemia"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Prague">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthMoravia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthBohemia"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#SouthBohemia">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthMoravia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Prague"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthMoravia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_EastBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_CentralBohemia"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#SouthMoravia">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthBohemia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_NorthMoravia"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_SouthBohemia"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Classic">
+  <rdfs:subClassOf rdf:resource="#Class_62_35"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Gold">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Junior"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Classic"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Junior">
+  <rdfs:subClassOf rdf:resource="#cClass_62_35"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Classic"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Gold"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#DebtRunningLoan">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_OKRunningLoan"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Running">
+  <rdfs:subClassOf rdf:resource="#Class_5_53"/>
+  <rdfs:subClassOf rdf:resource="#cClass_48_53"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#ProblemStatus">
+  <rdfs:subClassOf rdf:resource="#cClass_54_61"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#OKRunningLoan">
+  <rdfs:subClassOf rdf:resource="#Class_41_9"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Finished">
+  <rdfs:subClassOf rdf:resource="#Class_5_53"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_9"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#ForStatementPayment">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Leasing"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_InsurrancePayment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanPayment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_HouseholdPayment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#HouseholdPayment">
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Leasing"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_InsurrancePayment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_LoanPayment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_ForStatementPayment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#InsurrancePayment">
+  <rdfs:subClassOf rdf:resource="#cClass_48_5"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Leasing"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_HouseholdPayment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_ForStatementPayment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Leasing">
+  <rdfs:subClassOf rdf:resource="#Class_48_53"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#LoanPayment">
+  <rdfs:subClassOf rdf:resource="#cClass_48_5"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_Leasing"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_HouseholdPayment"/>
+  <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Non_ForStatementPayment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#NoProblemsFinishedLoan">
+  <rdfs:subClassOf rdf:resource="#Class_48_53"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#OKStatus">
+  <rdfs:subClassOf rdf:resource="#Class_54_61"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#NotPaidFinishedLoan">
+  <rdfs:subClassOf rdf:resource="#cClass_48_53"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#WestBohemia">
+  <rdfs:subClassOf rdf:resource="#Class_17_58"/>
+  <rdfs:subClassOf rdf:resource="#Class_58_22"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_hasLoanStatusValue_range">
+  <rdfs:subClassOf rdf:resource="#Class_26_59"/>
+  <rdfs:subClassOf rdf:resource="#Class_5_53"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_isPermanentOrderFor_range">
+  <rdfs:subClassOf rdf:resource="#Class_54_61"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_IsLoanOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_5_53"/>
+  <rdfs:subClassOf rdf:resource="#Class_62_35"/>
+  <rdfs:subClassOf rdf:resource="#Class_66_62"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_isCreditCardOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_66_62"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_isWithdrawalFor_range">
+  <rdfs:subClassOf rdf:resource="#Class_73_4"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Some_livesIn_range">
+  <rdfs:subClassOf rdf:resource="#Class_74_0"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Non_Loan">
+  <owl:equivalentClass rdf:resource="#cClass_5_53"/>
+</rdf:Description>
+
+
+</rdf:RDF>

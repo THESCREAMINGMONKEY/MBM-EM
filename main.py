@@ -17,9 +17,12 @@ from sklearn.model_selection import cross_validate, StratifiedShuffleSplit
 from sklearn.feature_selection import VarianceThreshold
 from sklearn.pipeline import Pipeline
 
+print(np.__version__)
+
+
 
 import warnings
-#warnings.filterwarnings('always')  # "error", "ignore", "always", "default", "module" or "once"
+warnings.filterwarnings('ignore')  # "error", "ignore", "always", "default", "module" or "once"
 
 # default paths
 
@@ -31,6 +34,7 @@ onto_path.append("onto")
 #onto = get_ontology("lubm.owl")
 onto = get_ontology("financial-abbrev.owl")
 #onto = get_ontology("NTNames.owl")
+#onto = get_ontology("KRKZEROONE.owl")
 
 
 # onto = get_ontology("moral.owl")
@@ -171,7 +175,7 @@ fs = VarianceThreshold(threshold=0.1) # was 0.1
 X = fs.fit_transform(X)
 # print(fs.variances_)
 print('X: ', X.shape)
-# print(fs.get_feature_names_out())
+print(fs.get_feature_names_out())
 
 # LEARNERS -----------------------------------------------------------
 
@@ -194,7 +198,7 @@ bnb = BNB()
 
 ##################################################################
 
-#lr = LogisticRegression(C=0.01, penalty='l1', multi_class='multinomial', solver='saga', max_iter=200)
+lr = LogisticRegression(C=0.01, penalty='l1', multi_class='multinomial', solver='saga', max_iter=200)
 
 ##################################################################
 
@@ -211,7 +215,7 @@ mbm_em = BNB_EM(max_it, min_change)
 
 
 models = {'MBM_EM' : mbm_em,
-          'MBM': bnb,
+          #'MBM': bnb,
           #'MMBM': rbm_bnb,
           #'MMBM_EM': mbm_em_bnb, # not work (incomplete)
           #'LR': lr
@@ -228,9 +232,8 @@ m_scoring = {'P': make_scorer(precision_score, labels=[1, 0], average='weighted'
 
 print('\n...loading TARGET CLASSES')
 
-filename = onto.name + "-t.n3"
-#filename = onto.name + "-t.nt"
-#filename = onto.name + "-t.owl"
+
+filename = onto.name + "-t.nt"
 target_onto = get_ontology(filename).load()
 
 # target_name = "http://www.example.org/" + onto.name + "/targets#Target"

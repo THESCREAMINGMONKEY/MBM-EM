@@ -1,0 +1,1161 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.example.org/NTNames/targets"
+         xmlns="http://www.example.org/NTNames/targets#">
+
+<owl:Ontology rdf:about="http://www.example.org/NTNames/targets"/>
+
+<owl:Class rdf:about="#Target">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_0_59">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Human"/>
+        <rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_longitude_range"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_ContentBearingObject"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Object"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_0_59">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_0_59"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Human"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Some_longitude_range"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_17_24">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#BeliefGroup"/>
+        <rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#CognitiveAgent"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Agent"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_17_24">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_17_24"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_CognitiveAgent"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_BeliefGroup"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_27_73">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#FreshWaterArea"/>
+        <rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_subregionOf_range"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#GeographicArea"/>
+  <rdfs:subClassOf rdf:resource="#Class_59_2"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_27_73">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_27_73"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_FreshWaterArea"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Some_subregionOf_range"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_14_19">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Angel"/>
+        <rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#ContentBearingObject"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Object"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Region"/>
+  <rdfs:subClassOf rdf:resource="#cClass_57_58"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_God"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_14_19">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_14_19"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Angel"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_ContentBearingObject"/>
+</owl:Class>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Human">
+  <rdfs:subClassOf rdf:resource="#Class_0_59"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#EthnicityAttribute">
+  <rdfs:subClassOf rdf:resource="#Class_1_47"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#GeographicArea">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass rdf:resource="#Class_59_2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#GeographicCoordinate">
+  <rdfs:subClassOf rdf:resource="#Class_3_15"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Group">
+  <rdfs:subClassOf rdf:resource="#Class_19_4"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Region">
+  <rdfs:subClassOf rdf:resource="#cClass_14_19"/>
+  <rdfs:subClassOf rdf:resource="#cClass_19_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_63_35"/>
+  <rdfs:subClassOf rdf:resource="#cClass_43_67"/>
+  <rdfs:subClassOf rdf:resource="#cClass_1_47"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Agent">
+  <rdfs:subClassOf rdf:resource="#Class_45_13"/>
+  <rdfs:subClassOf rdf:resource="#cClass_43_45"/>
+  <rdfs:subClassOf rdf:resource="#cClass_57_58"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Angel">
+  <rdfs:subClassOf rdf:resource="#Class_14_19"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#SupernaturalBeing">
+  <rdfs:subClassOf rdf:resource="#Class_3_15"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#God">
+  <rdfs:subClassOf rdf:resource="#cClass_14_19"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#BeliefGroup">
+  <rdfs:subClassOf rdf:resource="#Class_17_24"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#ContentBearingObject">
+  <rdfs:subClassOf rdf:resource="#cClass_45_13"/>
+  <rdfs:subClassOf rdf:resource="#Class_14_19"/>
+  <rdfs:subClassOf rdf:resource="#Class_19_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_46_21"/>
+  <rdfs:subClassOf rdf:resource="#cClass_47_27"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="#cClass_0_59"/>
+  <rdfs:subClassOf rdf:resource="#cClass_1_47"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Object"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Agent"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Region"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#City">
+  <rdfs:subClassOf rdf:resource="#Class_46_21"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#GeopoliticalArea">
+  <rdfs:subClassOf rdf:resource="#Class_59_2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#LandArea">
+  <rdfs:subClassOf rdf:resource="#Class_59_2"/>
+  <rdfs:subClassOf rdf:resource="#cClass_47_27"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#CognitiveAgent">
+  <rdfs:subClassOf rdf:resource="#Class_17_24"/>
+  <rdfs:subClassOf rdf:resource="#Class_24_3"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#FreshWaterArea">
+  <rdfs:subClassOf rdf:resource="#Class_27_73"/>
+  <rdfs:subClassOf rdf:resource="#Class_47_27"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#WaterArea">
+  <rdfs:subClassOf rdf:resource="#Class_59_2"/>
+  <rdfs:subClassOf rdf:resource="#cClass_45_13"/>
+  <rdfs:subClassOf rdf:resource="#cClass_46_21"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="#cClass_43_45"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#SaltWaterArea">
+  <rdfs:subClassOf rdf:resource="#cClass_47_27"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Island">
+  <rdfs:subClassOf rdf:resource="#Class_30_41"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#NaturalLanguage">
+  <rdfs:subClassOf rdf:resource="#Class_63_35"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Organization">
+  <rdfs:subClassOf rdf:resource="#Class_36_45"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#ResidenceGroup">
+  <rdfs:subClassOf rdf:resource="#Class_30_41"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Series">
+  <rdfs:subClassOf rdf:resource="#Class_43_45"/>
+  <rdfs:subClassOf rdf:resource="#Class_43_67"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#StateOrProvince">
+  <rdfs:subClassOf rdf:resource="#Class_43_45"/>
+  <rdfs:subClassOf rdf:resource="#Class_36_45"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Tribe">
+  <rdfs:subClassOf rdf:resource="#Class_46_21"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_antagonistOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_1_47"/>
+  <rdfs:subClassOf rdf:resource="#Class_47_27"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Human"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_relativeOf_range">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Human"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_ethnicityOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_57_58"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_latitude_range">
+  <rdfs:subClassOf rdf:resource="#Class_59_2"/>
+  <rdfs:subClassOf rdf:resource="#Class_57_58"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_longitude_range">
+  <rdfs:subClassOf rdf:resource="#Class_59_2"/>
+  <rdfs:subClassOf rdf:resource="#Class_0_59"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_visitedPlace_range">
+  <rdfs:subClassOf rdf:resource="#Class_63_35"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_nativePlaceOf_range">
+  <rdfs:subClassOf rdf:resource="#cClass_47_27"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_visitedPlaceOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_59_2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_religiousBelief_range">
+  <rdfs:subClassOf rdf:resource="#Class_43_67"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_subregion_range">
+  <rdfs:subClassOf rdf:resource="#Class_59_2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_subregionOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_27_73"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_Human">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Some_antagonistOf_range"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Some_relativeOf_range"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_GeographicArea">
+  <rdfs:subClassOf rdf:resource="#cClass_27_73"/>
+  <owl:equivalentClass rdf:resource="#cClass_59_2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_Region">
+  <rdfs:subClassOf rdf:resource="#cClass_59_2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_Object">
+  <rdfs:subClassOf rdf:resource="#cClass_45_13"/>
+  <rdfs:subClassOf rdf:resource="#cClass_14_19"/>
+  <rdfs:subClassOf rdf:resource="#cClass_19_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_46_21"/>
+  <rdfs:subClassOf rdf:resource="#cClass_47_27"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="#cClass_0_59"/>
+  <rdfs:subClassOf rdf:resource="#cClass_63_35"/>
+  <rdfs:subClassOf rdf:resource="#cClass_43_45"/>
+  <rdfs:subClassOf rdf:resource="#cClass_43_67"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_ContentBearingObject"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Agent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_Agent">
+  <rdfs:subClassOf rdf:resource="#cClass_17_24"/>
+</rdf:Description>
+
+<owl:Class rdf:about="#Class_23_39">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#LandArea"/>
+        <rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#ReligiousBelief"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Agent"/>
+  <rdfs:subClassOf rdf:resource="#cClass_19_47"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_WaterArea"/>
+  <rdfs:subClassOf rdf:resource="#cClass_54_35"/>
+  <rdfs:subClassOf rdf:resource="#cClass_29_67"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_23_39">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_23_39"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_LandArea"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_ReligiousBelief"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_19_47">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#ContentBearingObject"/>
+        <rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_antagonistOf_range"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Object"/>
+  <rdfs:subClassOf rdf:resource="#Class_63_12"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Region"/>
+  <rdfs:subClassOf rdf:resource="#cClass_23_39"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_19_47">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_19_47"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_ContentBearingObject"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Some_antagonistOf_range"/>
+</owl:Class>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#EthnicityAttribute">
+  <rdfs:subClassOf rdf:resource="#Class_67_1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#GeographicArea">
+  <rdfs:subClassOf rdf:resource="#Class_2_50"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Region">
+  <rdfs:subClassOf rdf:resource="#cClass_15_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_19_47"/>
+  <rdfs:subClassOf rdf:resource="#Class_63_12"/>
+  <rdfs:subClassOf rdf:resource="#cClass_63_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_54_35"/>
+  <rdfs:subClassOf rdf:resource="#cClass_67_1"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_ContentBearingObject"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#BeliefSystem">
+  <rdfs:subClassOf rdf:resource="#cClass_63_12"/>
+  <rdfs:subClassOf rdf:resource="#Class_15_9"/>
+  <rdfs:subClassOf rdf:resource="#Class_63_9"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Object">
+  <rdfs:subClassOf rdf:resource="#Class_12_20"/>
+  <rdfs:subClassOf rdf:resource="#Class_20_12"/>
+  <owl:equivalentClass rdf:resource="#Class_63_12"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Agent">
+  <rdfs:subClassOf rdf:resource="#Class_33_13"/>
+  <rdfs:subClassOf rdf:resource="#cClass_23_39"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#SupernaturalBeing">
+  <rdfs:subClassOf rdf:resource="#Class_15_9"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#ContentBearingObject">
+  <rdfs:subClassOf rdf:resource="#cClass_33_13"/>
+  <rdfs:subClassOf rdf:resource="#cClass_15_9"/>
+  <rdfs:subClassOf rdf:resource="#Class_19_47"/>
+  <rdfs:subClassOf rdf:resource="#cClass_63_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_50"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_23"/>
+  <rdfs:subClassOf rdf:resource="#cClass_29_67"/>
+  <rdfs:subClassOf rdf:resource="#cClass_67_1"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Region"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Agent"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Object"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#CitizenshipAttribute">
+  <rdfs:subClassOf rdf:resource="#Class_12_20"/>
+  <rdfs:subClassOf rdf:resource="#Class_20_12"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#City">
+  <rdfs:subClassOf rdf:resource="#Class_51_21"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#LandArea">
+  <rdfs:subClassOf rdf:resource="#Class_23_39"/>
+  <rdfs:subClassOf rdf:resource="#Class_56_23"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#FreshWaterArea">
+  <rdfs:subClassOf rdf:resource="#cClass_29_67"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#WaterArea">
+  <rdfs:subClassOf rdf:resource="#cClass_33_13"/>
+  <rdfs:subClassOf rdf:resource="#cClass_23_39"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_23"/>
+  <rdfs:subClassOf rdf:resource="#cClass_51_21"/>
+  <rdfs:subClassOf rdf:resource="#cClass_49_34"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#SaltWaterArea">
+  <rdfs:subClassOf rdf:resource="#Class_29_67"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Mountain">
+  <rdfs:subClassOf rdf:resource="#Class_33_13"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Nation">
+  <rdfs:subClassOf rdf:resource="#Class_49_34"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#NaturalLanguage">
+  <rdfs:subClassOf rdf:resource="#Class_54_35"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Organization">
+  <rdfs:subClassOf rdf:resource="#Class_36_66"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#ReligiousBelief">
+  <rdfs:subClassOf rdf:resource="#Class_23_39"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#ReligiousOrganization">
+  <rdfs:subClassOf rdf:resource="#Class_61_40"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#StateOrProvince">
+  <rdfs:subClassOf rdf:resource="#Class_59_45"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_antagonistOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_19_47"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_childOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_49_34"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_relativeOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_73_50"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_parentOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_51_21"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_enemyOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_54_35"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_ethnicity_range">
+  <rdfs:subClassOf rdf:resource="#Class_56_23"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_longitude_range">
+  <rdfs:subClassOf rdf:resource="#Class_59_45"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_memberOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_61_40"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_visitedPlace_range">
+  <rdfs:subClassOf rdf:resource="#Class_63_9"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_nativePlaceOf_range">
+  <rdfs:subClassOf rdf:resource="#cClass_29_67"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_politicalBelief_range">
+  <rdfs:subClassOf rdf:resource="#Class_36_66"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_religiousBelief_range">
+  <rdfs:subClassOf rdf:resource="#Class_29_67"/>
+  <rdfs:subClassOf rdf:resource="#Class_67_1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_subregionOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_73_50"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_GeographicArea">
+  <rdfs:subClassOf rdf:resource="#cClass_59_45"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_Object">
+  <rdfs:subClassOf rdf:resource="#cClass_33_13"/>
+  <rdfs:subClassOf rdf:resource="#cClass_19_47"/>
+  <rdfs:subClassOf rdf:resource="#cClass_2_50"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_23"/>
+  <rdfs:subClassOf rdf:resource="#cClass_54_35"/>
+  <rdfs:subClassOf rdf:resource="#cClass_29_67"/>
+  <owl:equivalentClass rdf:resource="#cClass_63_12"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_Agent">
+  <rdfs:subClassOf rdf:resource="#cClass_36_66"/>
+  <rdfs:subClassOf rdf:resource="#cClass_61_40"/>
+</rdf:Description>
+
+<owl:Class rdf:about="#Target">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_27_14">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#FreshWaterArea"/>
+        <rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Angel"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_ContentBearingObject"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Object"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_LandArea"/>
+  <rdfs:subClassOf rdf:resource="#cClass_42_34"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_SaltWaterArea"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Some_nativePlaceOf_range"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_God"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_27_14">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_27_14"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Angel"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_FreshWaterArea"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_42_34">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#ResidencyAttribute"/>
+        <rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Nation"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Agent"/>
+  <rdfs:subClassOf rdf:resource="#cClass_27_14"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_ContentBearingObject"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_WaterArea"/>
+  <rdfs:subClassOf rdf:resource="#cClass_27_28"/>
+  <rdfs:subClassOf rdf:resource="#cClass_29_54"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_42_34">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_42_34"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Nation"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_ResidencyAttribute"/>
+</owl:Class>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Human">
+  <rdfs:subClassOf rdf:resource="#Class_32_24"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#EthnicityAttribute">
+  <rdfs:subClassOf rdf:resource="#Class_20_11"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#GeographicArea">
+  <rdfs:subClassOf rdf:resource="#Class_6_64"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Region">
+  <rdfs:subClassOf rdf:resource="#cClass_56_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_8_55"/>
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass rdf:resource="#Class_6_64"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#ReligiousBeliefSystem">
+  <rdfs:subClassOf rdf:resource="#Class_8_55"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#BeliefSystem">
+  <rdfs:subClassOf rdf:resource="#Class_56_9"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#HumanAttribute">
+  <owl:equivalentClass rdf:resource="#Class_20_11"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Agent">
+  <rdfs:subClassOf rdf:resource="#cClass_6_64"/>
+  <rdfs:subClassOf rdf:resource="#cClass_27_42"/>
+  <rdfs:subClassOf rdf:resource="#cClass_42_34"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Angel">
+  <rdfs:subClassOf rdf:resource="#Class_27_14"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#SupernaturalBeing">
+  <rdfs:subClassOf rdf:resource="#Class_32_24"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#God">
+  <rdfs:subClassOf rdf:resource="#cClass_27_14"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#ContentBearingObject">
+  <rdfs:subClassOf rdf:resource="#cClass_24_69"/>
+  <rdfs:subClassOf rdf:resource="#cClass_27_14"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_9"/>
+  <rdfs:subClassOf rdf:resource="#cClass_6_64"/>
+  <rdfs:subClassOf rdf:resource="#cClass_27_42"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_51"/>
+  <rdfs:subClassOf rdf:resource="#cClass_42_34"/>
+  <rdfs:subClassOf rdf:resource="#cClass_59_38"/>
+  <rdfs:subClassOf rdf:resource="#cClass_8_55"/>
+  <rdfs:subClassOf rdf:resource="#cClass_29_54"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#CitizenshipAttribute">
+  <rdfs:subClassOf rdf:resource="#Class_20_11"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#LandArea">
+  <rdfs:subClassOf rdf:resource="#cClass_27_14"/>
+  <rdfs:subClassOf rdf:resource="#cClass_27_28"/>
+  <rdfs:subClassOf rdf:resource="#cClass_27_42"/>
+  <rdfs:subClassOf rdf:resource="#cClass_29_54"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#CognitiveAgent">
+  <rdfs:subClassOf rdf:resource="#Class_24_69"/>
+  <owl:equivalentClass rdf:resource="#Class_32_24"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Agent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#EvilSupernaturalBeing">
+  <rdfs:subClassOf rdf:resource="#Class_54_26"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#FreshWaterArea">
+  <rdfs:subClassOf rdf:resource="#Class_27_42"/>
+  <rdfs:subClassOf rdf:resource="#Class_27_28"/>
+  <rdfs:subClassOf rdf:resource="#Class_27_14"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#WaterArea">
+  <rdfs:subClassOf rdf:resource="#cClass_30_51"/>
+  <rdfs:subClassOf rdf:resource="#cClass_42_34"/>
+  <owl:equivalentClass rdf:resource="#Class_27_28"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#SaltWaterArea">
+  <rdfs:subClassOf rdf:resource="#Class_27_28"/>
+  <rdfs:subClassOf rdf:resource="#cClass_27_14"/>
+  <rdfs:subClassOf rdf:resource="#Class_29_54"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Island">
+  <rdfs:subClassOf rdf:resource="#Class_30_51"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Nation">
+  <rdfs:subClassOf rdf:resource="#Class_42_34"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Organization">
+  <rdfs:subClassOf rdf:resource="#Class_36_62"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#PoliticalAttribute">
+  <rdfs:subClassOf rdf:resource="#Class_20_11"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#PoliticalOrganization">
+  <rdfs:subClassOf rdf:resource="#Class_59_38"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#ReligiousBelief">
+  <rdfs:subClassOf rdf:resource="#Class_20_11"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#ResidenceGroup">
+  <rdfs:subClassOf rdf:resource="#Class_60_41"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#ResidencyAttribute">
+  <rdfs:subClassOf rdf:resource="#Class_20_11"/>
+  <rdfs:subClassOf rdf:resource="#Class_27_42"/>
+  <rdfs:subClassOf rdf:resource="#Class_42_34"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#StateOrProvince">
+  <rdfs:subClassOf rdf:resource="#Class_45_59"/>
+</rdf:Description>
+
+<Class_6_64 rdf:about="http://semanticbible.org/ns/2005/NTNames#Arabia"/>
+
+<Class_6_64 rdf:about="http://semanticbible.org/ns/2005/NTNames#Hades"/>
+
+<Class_6_64 rdf:about="http://semanticbible.org/ns/2005/NTNames#Idumea"/>
+
+<Class_6_64 rdf:about="http://semanticbible.org/ns/2005/NTNames#Libya"/>
+
+<Class_6_64 rdf:about="http://semanticbible.org/ns/2005/NTNames#Phrygia"/>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_hasAntagonist_range">
+  <rdfs:subClassOf rdf:resource="#Class_50_48"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_relativeOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_50_48"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_parentOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_30_51"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_enemyOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_54_26"/>
+  <rdfs:subClassOf rdf:resource="#Class_29_54"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_hasEnemy_range">
+  <rdfs:subClassOf rdf:resource="#Class_8_55"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_ethnicity_range">
+  <rdfs:subClassOf rdf:resource="#Class_56_68"/>
+  <rdfs:subClassOf rdf:resource="#Class_56_9"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_longitude_range">
+  <rdfs:subClassOf rdf:resource="#Class_45_59"/>
+  <rdfs:subClassOf rdf:resource="#Class_59_38"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_member_range">
+  <rdfs:subClassOf rdf:resource="#Class_60_41"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_nativePlace_range">
+  <rdfs:subClassOf rdf:resource="#Class_36_62"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_nativePlaceOf_range">
+  <rdfs:subClassOf rdf:resource="#cClass_27_14"/>
+  <rdfs:subClassOf rdf:resource="#cClass_27_28"/>
+  <rdfs:subClassOf rdf:resource="#cClass_27_42"/>
+  <rdfs:subClassOf rdf:resource="#cClass_29_54"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_residentPlace_range">
+  <rdfs:subClassOf rdf:resource="#Class_56_68"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_residentPlaceOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_24_69"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_Human">
+  <rdfs:subClassOf rdf:resource="#cClass_50_48"/>
+  <rdfs:subClassOf rdf:resource="#cClass_56_68"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_GeographicArea">
+  <rdfs:subClassOf rdf:resource="#cClass_27_28"/>
+  <rdfs:subClassOf rdf:resource="#cClass_45_59"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_Group">
+  <rdfs:subClassOf rdf:resource="#cClass_60_41"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_Region">
+  <owl:equivalentClass rdf:resource="#cClass_6_64"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_BeliefSystem">
+  <rdfs:subClassOf rdf:resource="#cClass_20_11"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_HumanAttribute">
+  <owl:equivalentClass rdf:resource="#cClass_20_11"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_Object">
+  <rdfs:subClassOf rdf:resource="#cClass_24_69"/>
+  <rdfs:subClassOf rdf:resource="#cClass_27_14"/>
+  <rdfs:subClassOf rdf:resource="#cClass_6_64"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_51"/>
+  <rdfs:subClassOf rdf:resource="#cClass_59_38"/>
+  <rdfs:subClassOf rdf:resource="#cClass_29_54"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_Agent">
+  <rdfs:subClassOf rdf:resource="#cClass_36_62"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_CognitiveAgent"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_CognitiveAgent">
+  <rdfs:subClassOf rdf:resource="#cClass_54_26"/>
+  <owl:equivalentClass rdf:resource="#cClass_32_24"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_WaterArea">
+  <owl:equivalentClass rdf:resource="#cClass_27_28"/>
+</rdf:Description>
+
+<owl:Class rdf:about="#Target">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_43_67">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Series"/>
+        <rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_religiousBelief_range"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Object"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Region"/>
+  <rdfs:subClassOf rdf:resource="#cClass_57_58"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_43_67">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_43_67"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Series"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Some_religiousBelief_range"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_43_45">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Series"/>
+        <rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#StateOrProvince"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Agent"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Object"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_WaterArea"/>
+  <rdfs:subClassOf rdf:resource="#cClass_47_27"/>
+  <rdfs:subClassOf rdf:resource="#cClass_1_47"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_43_45">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_43_45"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Series"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_StateOrProvince"/>
+</owl:Class>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Human">
+  <rdfs:subClassOf rdf:resource="#Class_0_59"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#EthnicityAttribute">
+  <rdfs:subClassOf rdf:resource="#Class_1_47"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#GeographicArea">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass rdf:resource="#Class_59_2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#GeographicCoordinate">
+  <rdfs:subClassOf rdf:resource="#Class_3_15"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Group">
+  <rdfs:subClassOf rdf:resource="#Class_19_4"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Region">
+  <rdfs:subClassOf rdf:resource="#cClass_14_19"/>
+  <rdfs:subClassOf rdf:resource="#cClass_19_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_63_35"/>
+  <rdfs:subClassOf rdf:resource="#cClass_43_67"/>
+  <rdfs:subClassOf rdf:resource="#cClass_1_47"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Agent">
+  <rdfs:subClassOf rdf:resource="#Class_45_13"/>
+  <rdfs:subClassOf rdf:resource="#cClass_43_45"/>
+  <rdfs:subClassOf rdf:resource="#cClass_57_58"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Angel">
+  <rdfs:subClassOf rdf:resource="#Class_14_19"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#SupernaturalBeing">
+  <rdfs:subClassOf rdf:resource="#Class_3_15"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#God">
+  <rdfs:subClassOf rdf:resource="#cClass_14_19"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#BeliefGroup">
+  <rdfs:subClassOf rdf:resource="#Class_17_24"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#ContentBearingObject">
+  <rdfs:subClassOf rdf:resource="#cClass_45_13"/>
+  <rdfs:subClassOf rdf:resource="#Class_14_19"/>
+  <rdfs:subClassOf rdf:resource="#Class_19_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_46_21"/>
+  <rdfs:subClassOf rdf:resource="#cClass_47_27"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="#cClass_0_59"/>
+  <rdfs:subClassOf rdf:resource="#cClass_1_47"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Object"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Agent"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Region"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#City">
+  <rdfs:subClassOf rdf:resource="#Class_46_21"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#GeopoliticalArea">
+  <rdfs:subClassOf rdf:resource="#Class_59_2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#LandArea">
+  <rdfs:subClassOf rdf:resource="#Class_59_2"/>
+  <rdfs:subClassOf rdf:resource="#cClass_47_27"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#CognitiveAgent">
+  <rdfs:subClassOf rdf:resource="#Class_17_24"/>
+  <rdfs:subClassOf rdf:resource="#Class_24_3"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#FreshWaterArea">
+  <rdfs:subClassOf rdf:resource="#Class_27_73"/>
+  <rdfs:subClassOf rdf:resource="#Class_47_27"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#WaterArea">
+  <rdfs:subClassOf rdf:resource="#Class_59_2"/>
+  <rdfs:subClassOf rdf:resource="#cClass_45_13"/>
+  <rdfs:subClassOf rdf:resource="#cClass_46_21"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="#cClass_43_45"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#SaltWaterArea">
+  <rdfs:subClassOf rdf:resource="#cClass_47_27"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Island">
+  <rdfs:subClassOf rdf:resource="#Class_30_41"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#NaturalLanguage">
+  <rdfs:subClassOf rdf:resource="#Class_63_35"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Organization">
+  <rdfs:subClassOf rdf:resource="#Class_36_45"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#ResidenceGroup">
+  <rdfs:subClassOf rdf:resource="#Class_30_41"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Series">
+  <rdfs:subClassOf rdf:resource="#Class_43_45"/>
+  <rdfs:subClassOf rdf:resource="#Class_43_67"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#StateOrProvince">
+  <rdfs:subClassOf rdf:resource="#Class_43_45"/>
+  <rdfs:subClassOf rdf:resource="#Class_36_45"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Tribe">
+  <rdfs:subClassOf rdf:resource="#Class_46_21"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_antagonistOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_1_47"/>
+  <rdfs:subClassOf rdf:resource="#Class_47_27"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Human"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_relativeOf_range">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Human"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_ethnicityOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_57_58"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_latitude_range">
+  <rdfs:subClassOf rdf:resource="#Class_59_2"/>
+  <rdfs:subClassOf rdf:resource="#Class_57_58"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_longitude_range">
+  <rdfs:subClassOf rdf:resource="#Class_59_2"/>
+  <rdfs:subClassOf rdf:resource="#Class_0_59"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_visitedPlace_range">
+  <rdfs:subClassOf rdf:resource="#Class_63_35"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_nativePlaceOf_range">
+  <rdfs:subClassOf rdf:resource="#cClass_47_27"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_visitedPlaceOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_59_2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_religiousBelief_range">
+  <rdfs:subClassOf rdf:resource="#Class_43_67"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_subregion_range">
+  <rdfs:subClassOf rdf:resource="#Class_59_2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Some_subregionOf_range">
+  <rdfs:subClassOf rdf:resource="#Class_27_73"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_Human">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Some_antagonistOf_range"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Some_relativeOf_range"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_GeographicArea">
+  <rdfs:subClassOf rdf:resource="#cClass_27_73"/>
+  <owl:equivalentClass rdf:resource="#cClass_59_2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_Region">
+  <rdfs:subClassOf rdf:resource="#cClass_59_2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_Object">
+  <rdfs:subClassOf rdf:resource="#cClass_45_13"/>
+  <rdfs:subClassOf rdf:resource="#cClass_14_19"/>
+  <rdfs:subClassOf rdf:resource="#cClass_19_4"/>
+  <rdfs:subClassOf rdf:resource="#cClass_46_21"/>
+  <rdfs:subClassOf rdf:resource="#cClass_47_27"/>
+  <rdfs:subClassOf rdf:resource="#cClass_30_41"/>
+  <rdfs:subClassOf rdf:resource="#cClass_0_59"/>
+  <rdfs:subClassOf rdf:resource="#cClass_63_35"/>
+  <rdfs:subClassOf rdf:resource="#cClass_43_45"/>
+  <rdfs:subClassOf rdf:resource="#cClass_43_67"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_ContentBearingObject"/>
+  <rdfs:subClassOf rdf:resource="http://semanticbible.org/ns/2005/NTNames#Non_Agent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://semanticbible.org/ns/2005/NTNames#Non_Agent">
+  <rdfs:subClassOf rdf:resource="#cClass_17_24"/>
+</rdf:Description>
+
+
+</rdf:RDF>

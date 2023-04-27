@@ -1,0 +1,596 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.example.org/KRKZEROONE/targets"
+         xmlns="http://www.example.org/KRKZEROONE/targets#">
+
+<owl:Ontology rdf:about="http://www.example.org/KRKZEROONE/targets"/>
+
+<owl:Class rdf:about="#Target">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_31_13">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.test.de/test#Some_rankDistance2_range"/>
+        <rdf:Description rdf:about="http://www.test.de/test#Some_fileDistance3_range"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Class_13_38"/>
+  <rdfs:subClassOf rdf:resource="#Class_34_22"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_31_13">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_31_13"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Non_Some_fileDistance3_range"/>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Non_Some_rankDistance2_range"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_21_28">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.test.de/test#Some_fileDistance7_range"/>
+        <rdf:Description rdf:about="http://www.test.de/test#Some_rankDistanceLessThan1_range"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Class_34_22"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_21_28">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_21_28"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Non_Some_fileDistance7_range"/>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Non_Some_rankDistanceLessThan1_range"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_27_13">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.test.de/test#Some_rankDistance0_range"/>
+        <rdf:Description rdf:about="http://www.test.de/test#Some_fileDistance3_range"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Class_13_38"/>
+  <rdfs:subClassOf rdf:resource="#Class_34_22"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_27_13">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_27_13"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Non_Some_fileDistance3_range"/>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Non_Some_rankDistance0_range"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_29_19">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.test.de/test#Some_rankDistance1_range"/>
+        <rdf:Description rdf:about="http://www.test.de/test#Some_fileDistance6_range"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Class_34_22"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_29_19">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_29_19"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Non_Some_fileDistance6_range"/>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Non_Some_rankDistance1_range"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_41_39">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.test.de/test#Some_rankDistance7_range"/>
+        <rdf:Description rdf:about="http://www.test.de/test#Some_rankDistance6_range"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Class_42_32"/>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Some_rankDistanceLessThan8_range"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_41_39">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_41_39"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Non_Some_rankDistance6_range"/>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Non_Some_rankDistance7_range"/>
+</owl:Class>
+
+<rdf:Description rdf:about="http://www.test.de/test#WKing">
+  <rdfs:subClassOf rdf:resource="#Class_29_3"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#WRook">
+  <rdfs:subClassOf rdf:resource="#Class_4_16"/>
+  <rdfs:subClassOf rdf:resource="#Class_4_27"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistance0_range">
+  <rdfs:subClassOf rdf:resource="#Class_13_7"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistanceLessThan2_range">
+  <rdfs:subClassOf rdf:resource="#Class_12_10"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistance2_range">
+  <rdfs:subClassOf rdf:resource="#Class_12_10"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistanceLessThan3_range">
+  <rdfs:subClassOf rdf:resource="#Class_12_30"/>
+  <rdfs:subClassOf rdf:resource="#Class_37_12"/>
+  <owl:equivalentClass rdf:resource="#Class_12_10"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistance3_range">
+  <rdfs:subClassOf rdf:resource="#Class_27_13"/>
+  <rdfs:subClassOf rdf:resource="#Class_31_13"/>
+  <rdfs:subClassOf rdf:resource="#Class_13_7"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistanceLessThan5_range">
+  <rdfs:subClassOf rdf:resource="#Class_14_18"/>
+  <rdfs:subClassOf rdf:resource="#Class_4_16"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistance5_range">
+  <rdfs:subClassOf rdf:resource="#Class_14_18"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistanceLessThan6_range">
+  <rdfs:subClassOf rdf:resource="#Class_20_15"/>
+  <owl:equivalentClass rdf:resource="#Class_14_18"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistance6_range">
+  <rdfs:subClassOf rdf:resource="#Class_29_19"/>
+  <rdfs:subClassOf rdf:resource="#Class_20_15"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistanceLessThan7_range">
+  <owl:equivalentClass rdf:resource="#Class_20_15"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistance7_range">
+  <rdfs:subClassOf rdf:resource="#Class_21_28"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistanceLessThan8_range">
+  <rdfs:subClassOf rdf:resource="#Class_34_22"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistanceLessThan0_range">
+  <rdfs:subClassOf rdf:resource="#Class_34_23"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_hasLowerRankThan_range">
+  <rdfs:subClassOf rdf:resource="#Class_40_25"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistance0_range">
+  <rdfs:subClassOf rdf:resource="#Class_27_13"/>
+  <rdfs:subClassOf rdf:resource="#Class_4_27"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistanceLessThan1_range">
+  <rdfs:subClassOf rdf:resource="#Class_21_28"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistance1_range">
+  <rdfs:subClassOf rdf:resource="#Class_29_3"/>
+  <rdfs:subClassOf rdf:resource="#Class_29_19"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistanceLessThan2_range">
+  <rdfs:subClassOf rdf:resource="#Class_12_30"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistance2_range">
+  <rdfs:subClassOf rdf:resource="#Class_31_13"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistanceLessThan4_range">
+  <rdfs:subClassOf rdf:resource="#Class_34_23"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistance5_range">
+  <rdfs:subClassOf rdf:resource="#Class_37_12"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistanceLessThan6_range">
+  <rdfs:subClassOf rdf:resource="#Class_13_38"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistance6_range">
+  <rdfs:subClassOf rdf:resource="#Class_41_39"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistanceLessThan7_range">
+  <rdfs:subClassOf rdf:resource="#Class_40_25"/>
+  <rdfs:subClassOf rdf:resource="#Class_42_32"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistance7_range">
+  <rdfs:subClassOf rdf:resource="#Class_41_39"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistanceLessThan8_range">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass rdf:resource="#Class_42_32"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Non_Piece">
+  <rdfs:subClassOf rdf:resource="#cClass_34_22"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_16"/>
+  <rdfs:subClassOf rdf:resource="#cClass_37_12"/>
+  <rdfs:subClassOf rdf:resource="#cClass_13_38"/>
+  <rdfs:subClassOf rdf:resource="#cClass_40_25"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_27"/>
+  <rdfs:subClassOf rdf:resource="#cClass_42_32"/>
+  <rdfs:subClassOf rdf:resource="#cClass_29_3"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Non_Some_fileDistanceLessThan3_range">
+  <owl:equivalentClass rdf:resource="#cClass_12_10"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Non_Some_fileDistanceLessThan4_range">
+  <rdfs:subClassOf rdf:resource="#cClass_13_7"/>
+  <rdfs:subClassOf rdf:resource="#cClass_12_10"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Non_Some_fileDistanceLessThan6_range">
+  <owl:equivalentClass rdf:resource="#cClass_14_18"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Non_Some_fileDistanceLessThan7_range">
+  <rdfs:subClassOf rdf:resource="#cClass_14_18"/>
+  <owl:equivalentClass rdf:resource="#cClass_20_15"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Non_Some_fileDistanceLessThan8_range">
+  <rdfs:subClassOf rdf:resource="#cClass_20_15"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Non_Some_rankDistanceLessThan8_range">
+  <rdfs:subClassOf rdf:resource="#cClass_41_39"/>
+  <owl:equivalentClass rdf:resource="#cClass_42_32"/>
+</rdf:Description>
+
+<owl:Class rdf:about="#Target">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_13_29">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.test.de/test#Some_fileDistance3_range"/>
+        <rdf:Description rdf:about="http://www.test.de/test#Some_rankDistance1_range"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Class_16_29"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_13_29">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_13_29"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Non_Some_fileDistance3_range"/>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Non_Some_rankDistance1_range"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_41_10">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.test.de/test#Some_rankDistance7_range"/>
+        <rdf:Description rdf:about="http://www.test.de/test#Some_fileDistanceLessThan2_range"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Class_36_0"/>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Piece"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_41_10">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_41_10"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Non_Some_fileDistanceLessThan2_range"/>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Non_Some_rankDistance7_range"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_2_33">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.test.de/test#BKing"/>
+        <rdf:Description rdf:about="http://www.test.de/test#Some_rankDistance3_range"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Class_36_2"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_2_33">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_2_33"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Non_BKing"/>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Non_Some_rankDistance3_range"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_23_2">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.test.de/test#Some_fileDistanceLessThan0_range"/>
+        <rdf:Description rdf:about="http://www.test.de/test#BKing"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Class_36_0"/>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Piece"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_23_2">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_23_2"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Non_BKing"/>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Non_Some_fileDistanceLessThan0_range"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Class_28_39">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.test.de/test#Some_rankDistanceLessThan1_range"/>
+        <rdf:Description rdf:about="http://www.test.de/test#Some_rankDistance6_range"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Some_rankDistanceLessThan7_range"/>
+</owl:Class>
+
+<owl:Class rdf:about="#cClass_28_39">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:complementOf rdf:resource="#Class_28_39"/>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Non_Some_rankDistanceLessThan1_range"/>
+  <rdfs:subClassOf rdf:resource="http://www.test.de/test#Non_Some_rankDistance6_range"/>
+</owl:Class>
+
+<rdf:Description rdf:about="http://www.test.de/test#Piece">
+  <rdfs:subClassOf rdf:resource="#Target"/>
+  <owl:equivalentClass rdf:resource="#Class_36_0"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Game">
+  <rdfs:subClassOf rdf:resource="#cClass_36_0"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#BKing">
+  <rdfs:subClassOf rdf:resource="#Class_23_2"/>
+  <rdfs:subClassOf rdf:resource="#Class_2_33"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#WKing">
+  <rdfs:subClassOf rdf:resource="#Class_36_0"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#WRook">
+  <rdfs:subClassOf rdf:resource="#Class_4_15"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistance0_range">
+  <rdfs:subClassOf rdf:resource="#Class_23_8"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistanceLessThan1_range">
+  <owl:equivalentClass rdf:resource="#Class_23_8"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistanceLessThan2_range">
+  <rdfs:subClassOf rdf:resource="#Class_41_10"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistance2_range">
+  <rdfs:subClassOf rdf:resource="#Class_11_43"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistance3_range">
+  <rdfs:subClassOf rdf:resource="#Class_13_29"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistance4_range">
+  <rdfs:subClassOf rdf:resource="#Class_29_15"/>
+  <rdfs:subClassOf rdf:resource="#Class_4_15"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistanceLessThan5_range">
+  <rdfs:subClassOf rdf:resource="#Class_16_29"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistance5_range">
+  <rdfs:subClassOf rdf:resource="#Class_31_17"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistanceLessThan6_range">
+  <rdfs:subClassOf rdf:resource="#Class_18_43"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistance6_range">
+  <rdfs:subClassOf rdf:resource="#Class_19_42"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistanceLessThan7_range">
+  <rdfs:subClassOf rdf:resource="#Class_31_20"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistanceLessThan8_range">
+  <rdfs:subClassOf rdf:resource="#Class_38_22"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_fileDistanceLessThan0_range">
+  <rdfs:subClassOf rdf:resource="#Class_23_8"/>
+  <rdfs:subClassOf rdf:resource="#Class_23_2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_hasLowerFileThan_range">
+  <rdfs:subClassOf rdf:resource="#Class_24_26"/>
+  <rdfs:subClassOf rdf:resource="#Class_36_0"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_hasLowerRankThan_range">
+  <rdfs:subClassOf rdf:resource="#Class_36_0"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_hasPiece_range">
+  <rdfs:subClassOf rdf:resource="#Class_24_26"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistanceLessThan1_range">
+  <rdfs:subClassOf rdf:resource="#Class_28_39"/>
+  <rdfs:subClassOf rdf:resource="#Class_27_30"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistance1_range">
+  <rdfs:subClassOf rdf:resource="#Class_27_30"/>
+  <rdfs:subClassOf rdf:resource="#Class_13_29"/>
+  <rdfs:subClassOf rdf:resource="#Class_29_15"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistanceLessThan2_range">
+  <owl:equivalentClass rdf:resource="#Class_27_30"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistance2_range">
+  <rdfs:subClassOf rdf:resource="#Class_31_17"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistance3_range">
+  <rdfs:subClassOf rdf:resource="#Class_2_33"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistanceLessThan5_range">
+  <rdfs:subClassOf rdf:resource="#Class_36_2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistanceLessThan6_range">
+  <rdfs:subClassOf rdf:resource="#Class_38_22"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistance6_range">
+  <rdfs:subClassOf rdf:resource="#Class_28_39"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistance7_range">
+  <rdfs:subClassOf rdf:resource="#Class_41_10"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistanceLessThan8_range">
+  <rdfs:subClassOf rdf:resource="#Class_19_42"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Some_rankDistanceLessThan0_range">
+  <rdfs:subClassOf rdf:resource="#Class_11_43"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Non_Piece">
+  <rdfs:subClassOf rdf:resource="#cClass_23_2"/>
+  <rdfs:subClassOf rdf:resource="#cClass_36_2"/>
+  <rdfs:subClassOf rdf:resource="#cClass_41_10"/>
+  <rdfs:subClassOf rdf:resource="#cClass_38_22"/>
+  <rdfs:subClassOf rdf:resource="#cClass_4_15"/>
+  <rdfs:subClassOf rdf:resource="#cClass_19_42"/>
+  <owl:equivalentClass rdf:resource="#cClass_36_0"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Non_Some_fileDistanceLessThan1_range">
+  <owl:equivalentClass rdf:resource="#cClass_23_8"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Non_Some_fileDistanceLessThan2_range">
+  <rdfs:subClassOf rdf:resource="#cClass_23_8"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Non_Some_rankDistanceLessThan2_range">
+  <owl:equivalentClass rdf:resource="#cClass_27_30"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Non_Some_rankDistanceLessThan3_range">
+  <rdfs:subClassOf rdf:resource="#cClass_27_30"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.test.de/test#Non_Some_rankDistanceLessThan7_range">
+  <rdfs:subClassOf rdf:resource="#cClass_28_39"/>
+</rdf:Description>
+
+
+</rdf:RDF>
