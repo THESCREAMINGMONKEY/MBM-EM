@@ -1,12 +1,12 @@
-#!/usr/bin/env python
-# coding: utf-8
+"""
+Università degli Studi di Bari Aldo Moro
 
+@authors: N. Fanizzi & C. Riefolo (c.riefolo2@studenti.uniba.it)
+"""
 
 import types
 import numpy as np
-
 from random import seed
-
 import pandas as pd
 from owlready2 import onto_path, get_ontology, sync_reasoner_pellet, Thing, Not, reasoning  # , reasoning, IRIS
 from sklearn.linear_model import LogisticRegression
@@ -16,35 +16,17 @@ from sklearn.metrics import make_scorer, precision_score, recall_score, f1_score
 from sklearn.model_selection import cross_validate, StratifiedShuffleSplit
 from sklearn.feature_selection import VarianceThreshold
 from sklearn.pipeline import Pipeline
+from sklearn.model_selection import GridSearchCV
 
-print(np.__version__)
-
-
-
-import warnings
-warnings.filterwarnings('ignore')  # "error", "ignore", "always", "default", "module" or "once"
-
-# default paths
-
-#onto_path.append("/content/drive/MyDrive/Colab Notebooks")
 
 # Absolute path
 onto_path.append("onto")
 
 #onto = get_ontology("lubm.owl")
-onto = get_ontology("financial-abbrev.owl")
+#onto = get_ontology("financial-abbrev.owl")
 #onto = get_ontology("NTNames.owl")
-#onto = get_ontology("KRKZEROONE.owl")
+onto = get_ontology("KRKZEROONE.owl")
 
-
-# onto = get_ontology("moral.owl")
-# onto = get_ontology("carcinogenesis.owl")
-# onto = get_ontology("glycomics-ontology.owl")
-
-
-
-# np.set_printoptions(threshold=np.inf)
-#reasoning.JAVA_MEMORY = 12000
 reasoning.JAVA_MEMORY = 4000
 
 SEED = 42  # 1
@@ -152,10 +134,8 @@ NEG = 0
 UNL = 1
 POS = 2
 
-
 # features x inds matrix
 pi = np.full((len(features), len(inds)), v[UNL])
-
 
 for f in range(len(features)):
     # print(f,'\t')
@@ -177,68 +157,59 @@ X = fs.fit_transform(X)
 print('X: ', X.shape)
 print(fs.get_feature_names_out())
 
-# LEARNERS -----------------------------------------------------------
 
-# For MBM with bnb
+# LEARNERS -------------------------------------------------------------------------------------------------
+
+################################################## For LR ##################################################
+
+lr = LogisticRegression(C=0.01, penalty='l1', multi_class='multinomial', solver='saga', max_iter=200)
+
+############################################# For MBM with bnb #############################################
 
 from BNB import BNB
 bnb = BNB()
 
-##################################################################
-
-# For MMBM with rbm + bnb
-
-#rbm = BernoulliRBM(n_components=50, batch_size=1, n_iter=200, learning_rate=0.01, random_state=SEED, verbose=False)
-
-#rbm_bnb = Pipeline(steps=[("rbm", rbm), ("clf", bnb)])
-
-##################################################################
-
-# svm = SVC(kernel='linear', degree=1, probability=True)
-
-##################################################################
-
-lr = LogisticRegression(C=0.01, penalty='l1', multi_class='multinomial', solver='saga', max_iter=200)
-
-##################################################################
-
-# For MBM with EM
-
-from BNB_EM import BNB_EM
+############################################# For MBM with EM ##############################################
 
 max_it = 200
 min_change = 0.000001
-mbm_em = BNB_EM(max_it, min_change)
 
-##################################################################
+from BNB_EM import BNB_EM
+mbm_em = BNB_EM(max_it, min_change, is_HBM=False)
+
+####################################### For HBM with VVBBMM + MBM_EM #######################################
+
+# INIT NEW MBM_EM
+h_mbm_em = BNB_EM(max_it, min_change, is_HBM=True)
+
+from mixture import VBBMM
+
+# INIT OF MIXTURE, BELOW THERE IS A NEW ONE
+
+n_comp_init = 2 # Random number, may will change with new optimal one in grid_search
+vbbmm = VBBMM(n_components=n_comp_init, n_init=10)
+mixture_hbm = Pipeline(steps=[("vbbmm", vbbmm), ("clf", h_mbm_em)])
+
+# END LEARNERS ----------------------------------------------------------------------------------------------
 
 
+models = {'MBM' : bnb,
+          'MBM_EM': mbm_em,
+          'HBM': mixture_hbm,
+          'LR': lr}
 
-models = {'MBM_EM' : mbm_em,
-          #'MBM': bnb,
-          #'MMBM': rbm_bnb,
-          #'MMBM_EM': mbm_em_bnb, # not work (incomplete)
-          #'LR': lr
-          }
-
-m_scoring = {'P': make_scorer(precision_score, labels=[1, 0], average='weighted', zero_division=1),
-             'R': make_scorer(recall_score, labels=[1, 0], average='weighted'),
-             'F1': make_scorer(f1_score, labels=[1, 0], average='weighted')}
-
-#metrics.f1_score(y_test, y_pred, average='weighted', labels=np.unique(y_pred))
+m_scoring = {'P': make_scorer(precision_score, labels = [1, 0], average = 'weighted', zero_division = 1),
+             'R': make_scorer(recall_score, labels = [1, 0], average = 'weighted'),
+             'F1': make_scorer(f1_score, labels = [1, 0], average = 'weighted', zero_division = 1)}
 
 
 # PROBLEMS MAIN LOOP
 
 print('\n...loading TARGET CLASSES')
 
-
 filename = onto.name + "-t.nt"
 target_onto = get_ontology(filename).load()
 
-# target_name = "http://www.example.org/" + onto.name + "/targets#Target"
-# target_super = IRIS[target_name]
-# print('Superclass', target_super)
 
 targets = np.array(sorted(set(target_onto.search(iri='*#Class_*')), key=(lambda x: x.name)))
 ctargets = np.array(sorted(set(target_onto.search(iri='*#cClass_*')), key=(lambda x: x.name)))
@@ -257,6 +228,11 @@ with target_onto:
 averages = np.empty((len(models), len(m_scoring), len(targets)))
 
 with onto:
+
+    n_comps = range(1,10) # min = 2
+    param_grid = {'vbbmm__n_components': n_comps}
+    grid_search = GridSearchCV(mixture_hbm, param_grid) # default cv = 5
+
     for n in range(len(targets)):
         target_class = targets[n]
         ctarget_class = ctargets[n]
@@ -277,7 +253,25 @@ with onto:
         for ind in neg:
             y[inds.index(ind)] = v[NEG]
 
-        # EXPERIMENTS ------------------------------------------
+        # NEW ONE MIXTURE
+        # the code below substitude the former mixture model with the new one that implement best params
+
+        grid_search.fit(X,y)
+        X = np.nan_to_num(X, nan=v[UNL]) # After grid_search unknow values may be NaN,
+                                         # so i re-transform them in unlabeled values = (0.5)
+        best_params = grid_search.best_params_
+
+        new_vbbmm = VBBMM(n_components=best_params.get('vbbmm__n_components'), n_init=10)
+        new_mixture_hbm = Pipeline(steps=[("vbbmm", new_vbbmm), ("clf", h_mbm_em)])
+
+
+        models = {'MBM' : bnb,
+                  'MBM_EM': mbm_em,
+                  'HBM': new_mixture_hbm,
+                  'LR': lr}
+
+
+# EXPERIMENTS ------------------------------------------
 
         sss0 = StratifiedShuffleSplit(n_splits=N_SPLITS,
                                       test_size=TEST_PORTION,
@@ -307,6 +301,7 @@ with onto:
                 std_dev = scores[m]['test_' + score].std()
                 print("\t %.3f ± %.3f %s" % (mean, std_dev, score))
                 averages[m][s][n] = mean
+
 
 print('\n\n\n>>>>>>>>>>>>>>>>>>>>>>>>>> FINAL RESULTS')
 print('CV Splits:', N_SPLITS, '\t test set prop.:', TEST_PORTION)

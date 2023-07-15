@@ -7,7 +7,7 @@ import types
 from owlready2 import *
 
 
-onto = get_ontology("NTNames.owl")
+onto = get_ontology("lubm.owl")
 
 reasoning.JAVA_MEMORY = 4000
 

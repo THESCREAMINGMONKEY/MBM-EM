@@ -20,6 +20,8 @@ from scipy.special import logsumexp
 class BNB(BaseEstimator, ClassifierMixin):
 
     def fit(self, X, y):
+
+        #X = np.reshape(X, (-1,1))
         X, y = check_X_y(X, y)
         unique,counts = np.unique(y,return_counts=True)
         unique = list(unique)
