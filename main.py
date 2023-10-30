@@ -5,6 +5,7 @@ Università degli Studi di Bari Aldo Moro
 """
 
 import types
+import pandas as pd
 import numpy as np
 from random import seed
 import pandas as pd
@@ -17,15 +18,18 @@ from sklearn.model_selection import cross_validate, StratifiedShuffleSplit
 from sklearn.feature_selection import VarianceThreshold
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import GridSearchCV
+from imblearn.metrics import geometric_mean_score
+import scikit_posthocs as sp
+
 
 
 # Absolute path
 onto_path.append("onto")
 
-#onto = get_ontology("lubm.owl")
+onto = get_ontology("lubm.owl")
 #onto = get_ontology("financial-abbrev.owl")
 #onto = get_ontology("NTNames.owl")
-onto = get_ontology("KRKZEROONE.owl")
+#onto = get_ontology("KRKZEROONE.owl")
 
 reasoning.JAVA_MEMORY = 4000
 
@@ -186,21 +190,23 @@ from mixture import VBBMM
 
 # INIT OF MIXTURE, BELOW THERE IS A NEW ONE
 
-n_comp_init = 2 # Random number, may will change with new optimal one in grid_search
-vbbmm = VBBMM(n_components=n_comp_init, n_init=10)
+n_comp = 2 # Random number, may will change with new optimal one in grid_search
+n_init = 10 # Random number, may will change with new optimal one in grid_search
+vbbmm = VBBMM(n_components=n_comp, n_init=n_init)
 mixture_hbm = Pipeline(steps=[("vbbmm", vbbmm), ("clf", h_mbm_em)])
 
 # END LEARNERS ----------------------------------------------------------------------------------------------
 
 
-models = {'MBM' : bnb,
-          'MBM_EM': mbm_em,
-          'HBM': mixture_hbm,
-          'LR': lr}
-
+models = {#'MBM' : bnb,
+          #'MBM_EM': mbm_em,
+          'HBM': mixture_hbm
+          #'LR': lr}
+}
 m_scoring = {'P': make_scorer(precision_score, labels = [1, 0], average = 'weighted', zero_division = 1),
              'R': make_scorer(recall_score, labels = [1, 0], average = 'weighted'),
-             'F1': make_scorer(f1_score, labels = [1, 0], average = 'weighted', zero_division = 1)}
+             'F1': make_scorer(f1_score, labels = [1, 0], average = 'weighted', zero_division = 1),
+             'G-Mean': make_scorer(geometric_mean_score, labels = [1, 0], average = 'weighted')}
 
 
 # PROBLEMS MAIN LOOP
@@ -229,9 +235,12 @@ averages = np.empty((len(models), len(m_scoring), len(targets)))
 
 with onto:
 
-    n_comps = range(1,10) # min = 2
-    param_grid = {'vbbmm__n_components': n_comps}
-    grid_search = GridSearchCV(mixture_hbm, param_grid) # default cv = 5
+    n_comps = range(2, 10) # min = 2
+    n_inits = [10, 20, 30, 40, 50]
+    param_grid_comp = {'vbbmm__n_components': n_comps}
+    param_grid_init = {'vbbmm__n_init': n_inits}
+    grid_search_comp = GridSearchCV(mixture_hbm, param_grid_comp) # default cv = 5
+    grid_search_init = GridSearchCV(mixture_hbm, param_grid_init) # default cv = 5
 
     for n in range(len(targets)):
         target_class = targets[n]
@@ -256,20 +265,25 @@ with onto:
         # NEW ONE MIXTURE
         # the code below substitude the former mixture model with the new one that implement best params
 
-        grid_search.fit(X,y)
+        grid_search_comp.fit(X,y)
+        grid_search_init.fit(X,y)
         X = np.nan_to_num(X, nan=v[UNL]) # After grid_search unknow values may be NaN,
                                          # so i re-transform them in unlabeled values = (0.5)
-        best_params = grid_search.best_params_
+        best_params_comp = grid_search_comp.best_params_
+        best_params_init = grid_search_init.best_params_
+        print(best_params_init)
+        print(best_params_comp)
 
-        new_vbbmm = VBBMM(n_components=best_params.get('vbbmm__n_components'), n_init=10)
+        #new_vbbmm = VBBMM(n_components=best_params_comp.get('vbbmm__n_components'), n_init=10)
+        new_vbbmm = VBBMM(n_components=best_params_comp.get('vbbmm__n_components'), n_init=best_params_init.get('vbbmm__n_init'))
         new_mixture_hbm = Pipeline(steps=[("vbbmm", new_vbbmm), ("clf", h_mbm_em)])
 
 
-        models = {'MBM' : bnb,
-                  'MBM_EM': mbm_em,
-                  'HBM': new_mixture_hbm,
-                  'LR': lr}
-
+        models = {#'MBM' : bnb,
+                  #'MBM_EM': mbm_em,
+                  'HBM': new_mixture_hbm
+                  #'LR': lr}
+        }
 
 # EXPERIMENTS ------------------------------------------
 
@@ -306,12 +320,42 @@ with onto:
 print('\n\n\n>>>>>>>>>>>>>>>>>>>>>>>>>> FINAL RESULTS')
 print('CV Splits:', N_SPLITS, '\t test set prop.:', TEST_PORTION)
 
+
+mean_dict = {}
+dev_standard_dict = {}
+
 for m, m_name in enumerate(models.keys()):
     print("\nModel:", m_name)
+
+    mean_model = []
+    dev_standard_model = []
+
     for s, score in enumerate(m_scoring.keys()):
         mean = averages[m][s].mean()
         std_dev = averages[m][s].std()
         print("\t %.3f ± %.3f %s" % (mean, std_dev, score))
+
+        mean_model.append(mean)
+        dev_standard_model.append(std_dev)
+
+    mean_dict[m_name] = mean_model
+    dev_standard_dict[m_name] = dev_standard_model
+
+
+df_mean = pd.DataFrame(mean_dict, index=list(m_scoring.keys()))
+
+df_dev_standard = pd.DataFrame(dev_standard_dict, index=list(m_scoring.keys()))
+
+# Input -> df, Output -> matrix
+'''nemenyi_mean_results = sp.posthoc_nemenyi_friedman(df_mean)
+nemenyi_dev_results = sp.posthoc_nemenyi_friedman(df_dev_standard)
+
+print("\n\n")
+print("Nemenyi-Friedman results (MEAN)")
+print(nemenyi_mean_results.to_string(index=True, header=True))
+print("\n\n")
+print("Nemenyi-Friedman results (DEV. STD)")
+print(nemenyi_dev_results.to_string(index=True, header=True))'''
 
 print("\n\n")
 

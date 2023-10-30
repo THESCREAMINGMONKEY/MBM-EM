@@ -21,7 +21,6 @@ class BNB(BaseEstimator, ClassifierMixin):
 
     def fit(self, X, y):
 
-        #X = np.reshape(X, (-1,1))
         X, y = check_X_y(X, y)
         unique,counts = np.unique(y,return_counts=True)
         unique = list(unique)
@@ -37,68 +36,11 @@ class BNB(BaseEstimator, ClassifierMixin):
         imp_val.fit(X)
         self.X_ = imp_val.transform(X)'''
 
-        '''self.X_ = X
-        self.N_ = self.X_.shape[0]
-        self.D_ = self.X_.shape[1]
-        self.X_ = self.EM_inc_values()'''
-
         self.p_ = np.array([self.X_[np.where(y==i)].mean(axis=0) for i in range(self.n_classes_)])
         self.priors_ = [c0 / (c1 + c0), c1 / (c1 + c0)]
 
 
         return self
-
-    def EM_inc_values(self):
-
-        """Implementation of the Expectation Maximization algorithm for imputing missing values in binary data.
-
-         Returns:
-         imputed_data: The data matrix with imputed missing values (N X D matrix)"""
-
-        num_iterations = 100
-        tol = 0.0001
-
-        #num_samples, num_features = self.X_.shape
-
-        self.X_[self.X_ == 0.5] = np.nan
-
-        # Initialize the probability of each feature being 1 using the observed data
-        prob = np.nanmean(self.X_, axis=0)
-
-        # Initialize the missing values with the mean of the observed values
-        imputed_data = np.copy(self.X_)
-
-        imputed_data[np.isnan(imputed_data)] = np.random.binomial(n=1, p=np.tile(prob, (self.N_, 1)))[np.isnan(imputed_data)]
-
-        # Iterate until convergence or maximum number of iterations is reached
-        for i in range(num_iterations):
-
-            # Expectation step: calculate the expected value of each missing value
-            expected_value = prob[np.newaxis, :] * imputed_data
-
-            for j in range(self.D_):
-                missing_values = np.isnan(self.X_[:, j])
-
-                if np.sum(missing_values) > 0:
-                    missing_prob = prob[j] * (1 - prob[j]) ** np.sum(missing_values)
-                    expected_value[missing_values, j] = missing_prob * np.sum(imputed_data[~missing_values, j]) / np.sum(1 - np.isnan(self.X_[:, j]))
-
-            # Maximization step: update the probability of each feature being 1
-            prob = np.mean(expected_value, axis=0)
-
-            # Update the missing values using the expected value
-            imputed_data[np.isnan(self.X_)] = np.random.binomial(n=1, p=expected_value)[np.isnan(self.X_)]
-
-            # Check for convergence
-
-            log_likelihood = np.sum(self.X_ * np.log(expected_value + 1e-9) + (1 - self.X_) * np.log(1 - expected_value + 1e-9))
-            #log_likelihood = np.sum(self.X_ * expected_value + (1 - self.X_) * (1 - expected_value)) - self.N_ * logsumexp(0, b=np.array([1, np.exp(expected_value)]))
-
-            if i > 0 and np.all(log_likelihood - prev_log_likelihood < tol):
-                break
-            prev_log_likelihood = log_likelihood
-
-        return imputed_data
 
     ################## PREDICT ##################
 

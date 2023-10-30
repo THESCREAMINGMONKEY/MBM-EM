@@ -14,6 +14,7 @@ class EM():
         self.D_ = n_features
         self.n_classes_ = n_classes_
 
+
     def EM_inc_values(self):
 
         """Implementation of the Expectation Maximization algorithm for imputing missing values in binary data.
@@ -66,7 +67,7 @@ class EM():
         return imputed_data
 
 
-        # ONLY FOR INITIALIZATION
+    # ONLY FOR INITIALIZATION
     def searchUnlabeled(self, y):
 
         """This function separate the labeled data from the unlabeled in two arrays"""
@@ -122,6 +123,7 @@ class EM():
 
         return labeled_resp_array, N_c/n_labeled_samples, p
 
+
     def stopCondition(self, resp_):
 
         """Compute stop condition (loglikelihood and 2-norm)"""
@@ -133,6 +135,7 @@ class EM():
         # ll = np.sum(np.log(self.likelihood))
 
         return eucl_norm
+
 
     def EStep(self, priors_, p_, y):
 
@@ -174,6 +177,7 @@ class EM():
         except ZeroDivisionError:
             print("Division by zero occured in reponsibility calculations!")
 
+
     def distrBernoulli(self, p_):
 
         """To compute the probability of x for each Bernoulli distribution
@@ -190,6 +194,7 @@ class EM():
                 #prob[n, c] = np.dot(np.power(p_c[c], X_n), np.power(1 - p_c[c], (1 - X_n)))
 
         return prob
+
 
     def MStep(self, resp_):
 
